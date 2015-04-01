@@ -1,0 +1,1101 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0408BDA81384202C00EEABE3 /* ResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0408BDA61384202B00EEABE3 /* ResourceViewController.m */; };
+		0408BDA91384202C00EEABE3 /* ResourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0408BDA71384202C00EEABE3 /* ResourceViewController.xib */; };
+		048BA0B2138569DD00B0F512 /* OAEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 048BA0B1138569DD00B0F512 /* OAEmployee.m */; };
+		04A4C84113831D59005118A4 /* AppTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4C83F13831D59005118A4 /* AppTypeViewController.m */; };
+		04A4C84213831D59005118A4 /* AppTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A4C84013831D59005118A4 /* AppTypeViewController.xib */; };
+		04C4347D13894D4900E99061 /* button-afspraak-maken-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347513894D4900E99061 /* button-afspraak-maken-active.png */; };
+		04C4347E13894D4900E99061 /* button-afspraak-maken.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347613894D4900E99061 /* button-afspraak-maken.png */; };
+		04C4347F13894D4900E99061 /* button-instellingen-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347713894D4900E99061 /* button-instellingen-active.png */; };
+		04C4348013894D4900E99061 /* button-instellingen-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347813894D4900E99061 /* button-instellingen-off.png */; };
+		04C4348113894D4900E99061 /* button-instellingen.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347913894D4900E99061 /* button-instellingen.png */; };
+		04C4348213894D4900E99061 /* button-mijn-afspraken-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347A13894D4900E99061 /* button-mijn-afspraken-active.png */; };
+		04C4348313894D4900E99061 /* button-mijn-afspraken-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347B13894D4900E99061 /* button-mijn-afspraken-off.png */; };
+		04C4348413894D4900E99061 /* button-mijn-afspraken.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4347C13894D4900E99061 /* button-mijn-afspraken.png */; };
+		04C4348713894D5500E99061 /* tabbar-bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C4348613894D5500E99061 /* tabbar-bkg.png */; };
+		04C4348A13894D8100E99061 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C4348813894D8100E99061 /* MainViewController.xib */; };
+		04C4348B13894D8100E99061 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C4348913894D8100E99061 /* MainWindow.xib */; };
+		04F3063B1389495F00C49162 /* config.ini in Resources */ = {isa = PBXBuildFile; fileRef = 04F306351389495F00C49162 /* config.ini */; };
+		04F3063C1389495F00C49162 /* customer_background_320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F306361389495F00C49162 /* customer_background_320x480.png */; };
+		04F3063D1389495F00C49162 /* customer_background_640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F306371389495F00C49162 /* customer_background_640x960.png */; };
+		04F3063E1389495F00C49162 /* customer_icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F306381389495F00C49162 /* customer_icon_114x114.png */; };
+		04F3063F1389495F00C49162 /* customer_icon_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F306391389495F00C49162 /* customer_icon_512x512.png */; };
+		04F306401389495F00C49162 /* customer_icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F3063A1389495F00C49162 /* customer_icon_57x57.png */; };
+		04F306451389498E00C49162 /* AllAppointmentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F306421389498E00C49162 /* AllAppointmentsViewController.xib */; };
+		04F306461389498E00C49162 /* AppointmentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F306431389498E00C49162 /* AppointmentsViewController.xib */; };
+		04F306471389498E00C49162 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F306441389498E00C49162 /* SettingsViewController.xib */; };
+		04F30649138949C800C49162 /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F30648138949C800C49162 /* icon_114x114.png */; };
+		04F3064C138949F000C49162 /* AllAppointmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3064B138949F000C49162 /* AllAppointmentsViewController.m */; };
+		04F3064F13894A0800C49162 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3064E13894A0800C49162 /* SettingsViewController.m */; };
+		04F3065213894A1800C49162 /* RMPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3065113894A1800C49162 /* RMPushNotification.m */; };
+		172F742313101702000D1D5A /* button_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 172F742013101702000D1D5A /* button_click.png */; };
+		172F742413101702000D1D5A /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 172F742113101702000D1D5A /* button.png */; };
+		172F742513101702000D1D5A /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = 172F742213101702000D1D5A /* text.png */; };
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MainViewController.m */; };
+		2C1DAE131381738F0018F370 /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DAE121381738F0018F370 /* icon_57x57.png */; };
+		2C1DAE17138173D40018F370 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DAE16138173D40018F370 /* Default@2x.png */; };
+		2C1DAE19138173DC0018F370 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C1DAE18138173DC0018F370 /* Default.png */; };
+		632DE813131692A6004FC55D /* DKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 632DE812131692A6004FC55D /* DKProgressView.m */; };
+		632DE83A13169829004FC55D /* pb_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 632DE83813169829004FC55D /* pb_bg.png */; };
+		632DE83B13169829004FC55D /* pb.png in Resources */ = {isa = PBXBuildFile; fileRef = 632DE83913169829004FC55D /* pb.png */; };
+		63A61E2D1313F21C0027CD77 /* DKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A61E2C1313F21C0027CD77 /* DKTextField.m */; };
+		63AFF5DC130BFE22008E8E1F /* DKActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFF5D1130BFE21008E8E1F /* DKActivityView.m */; };
+		63AFF5DD130BFE22008E8E1F /* DKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFF5D3130BFE21008E8E1F /* DKAlertView.m */; };
+		63AFF5E0130BFE22008E8E1F /* DKSyncDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFF5D9130BFE22008E8E1F /* DKSyncDataLoader.m */; };
+		63AFF5E1130BFE22008E8E1F /* DKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFF5DB130BFE22008E8E1F /* DKViewController.m */; };
+		63AFF67E130C1B0B008E8E1F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF67D130C1B0B008E8E1F /* CFNetwork.framework */; };
+		63AFF691130C1B20008E8E1F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF690130C1B20008E8E1F /* SystemConfiguration.framework */; };
+		63AFF697130C1B2E008E8E1F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF696130C1B2E008E8E1F /* MessageUI.framework */; };
+		63AFF6A1130C1B5F008E8E1F /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF6A0130C1B5F008E8E1F /* libz.1.2.3.dylib */; };
+		63AFF6AD130C1BC5008E8E1F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF6AC130C1BC5008E8E1F /* MobileCoreServices.framework */; };
+		63B003C1130FB70D00B55C40 /* CheckmarkTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003AC130FB70D00B55C40 /* CheckmarkTile.m */; };
+		63B003C2130FB70D00B55C40 /* KLCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003AF130FB70D00B55C40 /* KLCalendarModel.m */; };
+		63B003C3130FB70D00B55C40 /* KLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003B1130FB70D00B55C40 /* KLCalendarView.m */; };
+		63B003C4130FB70D00B55C40 /* KLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003B3130FB70D00B55C40 /* KLColors.m */; };
+		63B003C5130FB70D00B55C40 /* KLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003B5130FB70D00B55C40 /* KLDate.m */; };
+		63B003C6130FB70D00B55C40 /* KLGraphicsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003B7130FB70D00B55C40 /* KLGraphicsUtils.m */; };
+		63B003C7130FB70D00B55C40 /* KLGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003B9130FB70D00B55C40 /* KLGridView.m */; };
+		63B003C8130FB70D00B55C40 /* KLTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003BB130FB70D00B55C40 /* KLTile.m */; };
+		63B003CC130FB70D00B55C40 /* THCalendarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B003C0130FB70D00B55C40 /* THCalendarInfo.m */; };
+		63B0041E130FBAFA00B55C40 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B0041D130FBAFA00B55C40 /* QuartzCore.framework */; };
+		63B006EA130FED0D00B55C40 /* OAAppointmentDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B006E9130FED0D00B55C40 /* OAAppointmentDay.m */; };
+		63B00754130FF45000B55C40 /* OAAgenda.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B00753130FF45000B55C40 /* OAAgenda.m */; };
+		63B41C61130D64370005AF2C /* OARequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B41C60130D64370005AF2C /* OARequest.m */; };
+		63B41C64130D647A0005AF2C /* DKAsyncDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B41C63130D647A0005AF2C /* DKAsyncDataLoader.m */; };
+		63B41CD1130D75710005AF2C /* OAAppointmentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B41CD0130D75710005AF2C /* OAAppointmentType.m */; };
+		63B41D93130D7F6D0005AF2C /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B41D90130D7F6D0005AF2C /* NSDataAdditions.m */; };
+		63B41D94130D7F6D0005AF2C /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B41D92130D7F6D0005AF2C /* TBXML.m */; };
+		63B45963130E8C52002D8761 /* allert_icon_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45934130E8C52002D8761 /* allert_icon_ok.png */; };
+		63B45964130E8C52002D8761 /* allert_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45935130E8C52002D8761 /* allert_icon.png */; };
+		63B45965130E8C52002D8761 /* allert_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45936130E8C52002D8761 /* allert_ok.png */; };
+		63B45966130E8C52002D8761 /* back_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45937130E8C52002D8761 /* back_tap.png */; };
+		63B45967130E8C52002D8761 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45938130E8C52002D8761 /* back.png */; };
+		63B45968130E8C52002D8761 /* bg_allert_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45939130E8C52002D8761 /* bg_allert_01.png */; };
+		63B45969130E8C52002D8761 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4593A130E8C52002D8761 /* bg.png */; };
+		63B4596A130E8C52002D8761 /* birthday_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4593B130E8C52002D8761 /* birthday_bg.png */; };
+		63B4596D130E8C52002D8761 /* button_calendar_activ_left_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4593E130E8C52002D8761 /* button_calendar_activ_left_tap.png */; };
+		63B4596E130E8C52002D8761 /* button_calendar_activ_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4593F130E8C52002D8761 /* button_calendar_activ_left.png */; };
+		63B4596F130E8C52002D8761 /* button_calendar_activ_right_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45940130E8C52002D8761 /* button_calendar_activ_right_tap.png */; };
+		63B45970130E8C52002D8761 /* button_calendar_activ_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45941130E8C52002D8761 /* button_calendar_activ_right.png */; };
+		63B45971130E8C52002D8761 /* button_calendar_noactiv_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45942130E8C52002D8761 /* button_calendar_noactiv_right.png */; };
+		63B45972130E8C52002D8761 /* button_calendar_noactiv_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45943130E8C52002D8761 /* button_calendar_noactiv_left.png */; };
+		63B45979130E8C52002D8761 /* calendar_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4594A130E8C52002D8761 /* calendar_top.png */; };
+		63B4597A130E8C52002D8761 /* cell_activ.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4594B130E8C52002D8761 /* cell_activ.png */; };
+		63B4597B130E8C52002D8761 /* cell_calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4594C130E8C52002D8761 /* cell_calendar.png */; };
+		63B4597C130E8C52002D8761 /* cell_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4594D130E8C52002D8761 /* cell_click.png */; };
+		63B4597D130E8C52002D8761 /* checkbox_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4594E130E8C52002D8761 /* checkbox_tap.png */; };
+		63B4597E130E8C52002D8761 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4594F130E8C52002D8761 /* checkbox.png */; };
+		63B4597F130E8C52002D8761 /* input_postcode_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45950130E8C52002D8761 /* input_postcode_01.png */; };
+		63B45980130E8C52002D8761 /* input_postcode_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45951130E8C52002D8761 /* input_postcode_02.png */; };
+		63B45981130E8C52002D8761 /* input.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45952130E8C52002D8761 /* input.png */; };
+		63B45982130E8C52002D8761 /* line_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45953130E8C52002D8761 /* line_select.png */; };
+		63B45983130E8C52002D8761 /* list_time.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45954130E8C52002D8761 /* list_time.png */; };
+		63B45984130E8C52002D8761 /* days.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45955130E8C52002D8761 /* days.png */; };
+		63B45985130E8C52002D8761 /* navigationbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45956130E8C52002D8761 /* navigationbar.png */; };
+		63B45986130E8C52002D8761 /* plashka_01_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45957130E8C52002D8761 /* plashka_01_tap.png */; };
+		63B45987130E8C52002D8761 /* plashka_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45958130E8C52002D8761 /* plashka_01.png */; };
+		63B45988130E8C52002D8761 /* plashka.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45959130E8C52002D8761 /* plashka.png */; };
+		63B4598A130E8C52002D8761 /* select_activ.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4595B130E8C52002D8761 /* select_activ.png */; };
+		63B4598B130E8C52002D8761 /* select_border.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4595C130E8C52002D8761 /* select_border.png */; };
+		63B4598C130E8C52002D8761 /* select.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4595D130E8C52002D8761 /* select.png */; };
+		63B4598D130E8C52002D8761 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B4595E130E8C52002D8761 /* star.png */; };
+		63B45990130E8C52002D8761 /* verder_tap.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45961130E8C52002D8761 /* verder_tap.png */; };
+		63B45991130E8C52002D8761 /* verder.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45962130E8C52002D8761 /* verder.png */; };
+		63B459C8130E8DBB002D8761 /* navigationbar1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B459C7130E8DBB002D8761 /* navigationbar1.png */; };
+		63B45BF7130EB08A002D8761 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B45BF5130EB08A002D8761 /* SplashViewController.m */; };
+		63B45BF8130EB08A002D8761 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B45BF6130EB08A002D8761 /* SplashViewController.xib */; };
+		63B45C10130EB256002D8761 /* drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B45C0D130EB256002D8761 /* drawing.m */; };
+		63B45C11130EB256002D8761 /* PDColoredProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B45C0F130EB256002D8761 /* PDColoredProgressView.m */; };
+		63B45D4D130EC768002D8761 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B45D4C130EC768002D8761 /* line.png */; };
+		63B45D91130ED369002D8761 /* DKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B45D90130ED369002D8761 /* DKCalendarView.m */; };
+		63C0817A1312860500314717 /* SelectAppointmentTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C081781312860500314717 /* SelectAppointmentTimeViewController.m */; };
+		63C0817B1312860500314717 /* SelectAppointmentTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C081791312860500314717 /* SelectAppointmentTimeViewController.xib */; };
+		63C081EA1312950500314717 /* OAAppointment.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C081E91312950500314717 /* OAAppointment.m */; };
+		63C082941312A47800314717 /* list_time1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C082931312A47800314717 /* list_time1.png */; };
+		63C0838D1312B5C400314717 /* MakeAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */; };
+		63C0838E1312B5C400314717 /* MakeAppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C0838C1312B5C400314717 /* MakeAppointmentViewController.xib */; };
+		63C33CC0131D22F200FA982C /* algemeneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C33CBF131D22F200FA982C /* algemeneButton.png */; };
+		63C33CD2131D26FF00FA982C /* makeAppointmentPopup.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C33CD1131D26FF00FA982C /* makeAppointmentPopup.png */; };
+		63C33CD6131D2A4D00FA982C /* DKPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C33CD4131D2A4D00FA982C /* DKPopUp.m */; };
+		63C33D41131D363800FA982C /* voorwaarden.html in Resources */ = {isa = PBXBuildFile; fileRef = 63C33D40131D363800FA982C /* voorwaarden.html */; };
+		63C33E12131D487E00FA982C /* AppointmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C33E10131D487E00FA982C /* AppointmentsViewController.m */; };
+		63C33ED3131D5A8A00FA982C /* DDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C33ED2131D5A8A00FA982C /* DDPageControl.m */; };
+		63ED95FD1317B6CB00BCF2FC /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ED95FC1317B6CB00BCF2FC /* shadow.png */; };
+		8C927445133E1BB300C9377C /* FacebookModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927420133E1BB300C9377C /* FacebookModule.m */; };
+		8C927446133E1BB300C9377C /* FacebookWallMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927422133E1BB300C9377C /* FacebookWallMessage.m */; };
+		8C927447133E1BB300C9377C /* FBConnect.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C927424133E1BB300C9377C /* FBConnect.bundle */; };
+		8C927448133E1BB300C9377C /* FBConnectGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927432133E1BB300C9377C /* FBConnectGlobal.m */; };
+		8C927449133E1BB300C9377C /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927433133E1BB300C9377C /* FBDialog.m */; };
+		8C92744A133E1BB300C9377C /* FBLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927434133E1BB300C9377C /* FBLoginButton.m */; };
+		8C92744B133E1BB300C9377C /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927435133E1BB300C9377C /* FBLoginDialog.m */; };
+		8C92744C133E1BB300C9377C /* FBNativeStringUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927436133E1BB300C9377C /* FBNativeStringUploader.m */; };
+		8C92744D133E1BB300C9377C /* FBPermissionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927437133E1BB300C9377C /* FBPermissionDialog.m */; };
+		8C92744E133E1BB300C9377C /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927438133E1BB300C9377C /* FBRequest.m */; };
+		8C92744F133E1BB300C9377C /* FBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927439133E1BB300C9377C /* FBSession.m */; };
+		8C927450133E1BB300C9377C /* FBStreamDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C92743A133E1BB300C9377C /* FBStreamDialog.m */; };
+		8C927451133E1BB300C9377C /* FBTranslationsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C92743B133E1BB300C9377C /* FBTranslationsLoader.m */; };
+		8C927452133E1BB300C9377C /* FBUploadResultReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C92743C133E1BB300C9377C /* FBUploadResultReceiver.m */; };
+		8C927453133E1BB300C9377C /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C92743D133E1BB300C9377C /* FBUser.m */; };
+		8C927454133E1BB300C9377C /* FacebookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927440133E1BB300C9377C /* FacebookUtility.m */; };
+		8C927455133E1BB300C9377C /* FBXMLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927442133E1BB300C9377C /* FBXMLHandler.m */; };
+		8C927456133E1BB300C9377C /* MyFBLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927444133E1BB300C9377C /* MyFBLoginButton.m */; };
+		8C92746B133E25E500C9377C /* fbButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C92746A133E25E500C9377C /* fbButton.png */; };
+		8C9274B1133E27E600C9377C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9274B0133E27E600C9377C /* Reachability.m */; };
+		8C9340EC133F5AB8002043DD /* fbbuttons.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C9340EB133F5AB8002043DD /* fbbuttons.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0408BDA51384202B00EEABE3 /* ResourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceViewController.h; sourceTree = "<group>"; };
+		0408BDA61384202B00EEABE3 /* ResourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceViewController.m; sourceTree = "<group>"; };
+		0408BDA71384202C00EEABE3 /* ResourceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResourceViewController.xib; path = Classes/ResourceViewController.xib; sourceTree = "<group>"; };
+		048BA0B0138569DD00B0F512 /* OAEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAEmployee.h; sourceTree = "<group>"; };
+		048BA0B1138569DD00B0F512 /* OAEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAEmployee.m; sourceTree = "<group>"; };
+		04A4C83E13831D59005118A4 /* AppTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTypeViewController.h; sourceTree = "<group>"; };
+		04A4C83F13831D59005118A4 /* AppTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTypeViewController.m; sourceTree = "<group>"; };
+		04A4C84013831D59005118A4 /* AppTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppTypeViewController.xib; path = Classes/AppTypeViewController.xib; sourceTree = "<group>"; };
+		04C4347513894D4900E99061 /* button-afspraak-maken-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-afspraak-maken-active.png"; sourceTree = "<group>"; };
+		04C4347613894D4900E99061 /* button-afspraak-maken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-afspraak-maken.png"; sourceTree = "<group>"; };
+		04C4347713894D4900E99061 /* button-instellingen-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-instellingen-active.png"; sourceTree = "<group>"; };
+		04C4347813894D4900E99061 /* button-instellingen-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-instellingen-off.png"; sourceTree = "<group>"; };
+		04C4347913894D4900E99061 /* button-instellingen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-instellingen.png"; sourceTree = "<group>"; };
+		04C4347A13894D4900E99061 /* button-mijn-afspraken-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-mijn-afspraken-active.png"; sourceTree = "<group>"; };
+		04C4347B13894D4900E99061 /* button-mijn-afspraken-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-mijn-afspraken-off.png"; sourceTree = "<group>"; };
+		04C4347C13894D4900E99061 /* button-mijn-afspraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-mijn-afspraken.png"; sourceTree = "<group>"; };
+		04C4348613894D5500E99061 /* tabbar-bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-bkg.png"; sourceTree = "<group>"; };
+		04C4348813894D8100E99061 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
+		04C4348913894D8100E99061 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Classes/MainWindow.xib; sourceTree = "<group>"; };
+		04F306351389495F00C49162 /* config.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.ini; sourceTree = "<group>"; };
+		04F306361389495F00C49162 /* customer_background_320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customer_background_320x480.png; sourceTree = "<group>"; };
+		04F306371389495F00C49162 /* customer_background_640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customer_background_640x960.png; sourceTree = "<group>"; };
+		04F306381389495F00C49162 /* customer_icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customer_icon_114x114.png; sourceTree = "<group>"; };
+		04F306391389495F00C49162 /* customer_icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customer_icon_512x512.png; sourceTree = "<group>"; };
+		04F3063A1389495F00C49162 /* customer_icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customer_icon_57x57.png; sourceTree = "<group>"; };
+		04F306421389498E00C49162 /* AllAppointmentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AllAppointmentsViewController.xib; path = Classes/AllAppointmentsViewController.xib; sourceTree = "<group>"; };
+		04F306431389498E00C49162 /* AppointmentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AppointmentsViewController.xib; path = Classes/AppointmentsViewController.xib; sourceTree = "<group>"; };
+		04F306441389498E00C49162 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
+		04F30648138949C800C49162 /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
+		04F3064A138949F000C49162 /* AllAppointmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllAppointmentsViewController.h; sourceTree = "<group>"; };
+		04F3064B138949F000C49162 /* AllAppointmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllAppointmentsViewController.m; sourceTree = "<group>"; };
+		04F3064D13894A0800C49162 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		04F3064E13894A0800C49162 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		04F3065013894A1800C49162 /* RMPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPushNotification.h; sourceTree = "<group>"; };
+		04F3065113894A1800C49162 /* RMPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPushNotification.m; sourceTree = "<group>"; };
+		172F742013101702000D1D5A /* button_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_click.png; sourceTree = "<group>"; };
+		172F742113101702000D1D5A /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		172F742213101702000D1D5A /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* MizarIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MizarIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C1DAE121381738F0018F370 /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
+		2C1DAE16138173D40018F370 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2C1DAE18138173DC0018F370 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* OnlineAfspraken_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineAfspraken_Prefix.pch; sourceTree = "<group>"; };
+		632DE811131692A6004FC55D /* DKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKProgressView.h; sourceTree = "<group>"; };
+		632DE812131692A6004FC55D /* DKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKProgressView.m; sourceTree = "<group>"; };
+		632DE83813169829004FC55D /* pb_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_bg.png; sourceTree = "<group>"; };
+		632DE83913169829004FC55D /* pb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb.png; sourceTree = "<group>"; };
+		63A61E2B1313F21C0027CD77 /* DKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTextField.h; sourceTree = "<group>"; };
+		63A61E2C1313F21C0027CD77 /* DKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTextField.m; sourceTree = "<group>"; };
+		63AFF5D0130BFE21008E8E1F /* DKActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActivityView.h; sourceTree = "<group>"; };
+		63AFF5D1130BFE21008E8E1F /* DKActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActivityView.m; sourceTree = "<group>"; };
+		63AFF5D2130BFE21008E8E1F /* DKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAlertView.h; sourceTree = "<group>"; };
+		63AFF5D3130BFE21008E8E1F /* DKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAlertView.m; sourceTree = "<group>"; };
+		63AFF5D8130BFE22008E8E1F /* DKSyncDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKSyncDataLoader.h; sourceTree = "<group>"; };
+		63AFF5D9130BFE22008E8E1F /* DKSyncDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKSyncDataLoader.m; sourceTree = "<group>"; };
+		63AFF5DA130BFE22008E8E1F /* DKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKViewController.h; sourceTree = "<group>"; };
+		63AFF5DB130BFE22008E8E1F /* DKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKViewController.m; sourceTree = "<group>"; };
+		63AFF5E7130BFE8B008E8E1F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		63AFF67D130C1B0B008E8E1F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		63AFF690130C1B20008E8E1F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		63AFF696130C1B2E008E8E1F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		63AFF6A0130C1B5F008E8E1F /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		63AFF6AC130C1BC5008E8E1F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		63B003AB130FB70D00B55C40 /* CheckmarkTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckmarkTile.h; sourceTree = "<group>"; };
+		63B003AC130FB70D00B55C40 /* CheckmarkTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckmarkTile.m; sourceTree = "<group>"; };
+		63B003AE130FB70D00B55C40 /* KLCalendarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCalendarModel.h; sourceTree = "<group>"; };
+		63B003AF130FB70D00B55C40 /* KLCalendarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCalendarModel.m; sourceTree = "<group>"; };
+		63B003B0130FB70D00B55C40 /* KLCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCalendarView.h; sourceTree = "<group>"; };
+		63B003B1130FB70D00B55C40 /* KLCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCalendarView.m; sourceTree = "<group>"; };
+		63B003B2130FB70D00B55C40 /* KLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLColors.h; sourceTree = "<group>"; };
+		63B003B3130FB70D00B55C40 /* KLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLColors.m; sourceTree = "<group>"; };
+		63B003B4130FB70D00B55C40 /* KLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDate.h; sourceTree = "<group>"; };
+		63B003B5130FB70D00B55C40 /* KLDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDate.m; sourceTree = "<group>"; };
+		63B003B6130FB70D00B55C40 /* KLGraphicsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLGraphicsUtils.h; sourceTree = "<group>"; };
+		63B003B7130FB70D00B55C40 /* KLGraphicsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLGraphicsUtils.m; sourceTree = "<group>"; };
+		63B003B8130FB70D00B55C40 /* KLGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLGridView.h; sourceTree = "<group>"; };
+		63B003B9130FB70D00B55C40 /* KLGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLGridView.m; sourceTree = "<group>"; };
+		63B003BA130FB70D00B55C40 /* KLTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTile.h; sourceTree = "<group>"; };
+		63B003BB130FB70D00B55C40 /* KLTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTile.m; sourceTree = "<group>"; };
+		63B003BF130FB70D00B55C40 /* THCalendarInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCalendarInfo.h; sourceTree = "<group>"; };
+		63B003C0130FB70D00B55C40 /* THCalendarInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCalendarInfo.m; sourceTree = "<group>"; };
+		63B0041D130FBAFA00B55C40 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		63B006E8130FED0D00B55C40 /* OAAppointmentDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAppointmentDay.h; sourceTree = "<group>"; };
+		63B006E9130FED0D00B55C40 /* OAAppointmentDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAppointmentDay.m; sourceTree = "<group>"; };
+		63B00752130FF45000B55C40 /* OAAgenda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAgenda.h; sourceTree = "<group>"; };
+		63B00753130FF45000B55C40 /* OAAgenda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAgenda.m; sourceTree = "<group>"; };
+		63B41C5F130D64370005AF2C /* OARequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequest.h; sourceTree = "<group>"; };
+		63B41C60130D64370005AF2C /* OARequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequest.m; sourceTree = "<group>"; };
+		63B41C62130D647A0005AF2C /* DKAsyncDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAsyncDataLoader.h; sourceTree = "<group>"; };
+		63B41C63130D647A0005AF2C /* DKAsyncDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAsyncDataLoader.m; sourceTree = "<group>"; };
+		63B41CCF130D75710005AF2C /* OAAppointmentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAppointmentType.h; sourceTree = "<group>"; };
+		63B41CD0130D75710005AF2C /* OAAppointmentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAppointmentType.m; sourceTree = "<group>"; };
+		63B41D8F130D7F6D0005AF2C /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		63B41D90130D7F6D0005AF2C /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		63B41D91130D7F6D0005AF2C /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
+		63B41D92130D7F6D0005AF2C /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
+		63B45934130E8C52002D8761 /* allert_icon_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allert_icon_ok.png; sourceTree = "<group>"; };
+		63B45935130E8C52002D8761 /* allert_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allert_icon.png; sourceTree = "<group>"; };
+		63B45936130E8C52002D8761 /* allert_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allert_ok.png; sourceTree = "<group>"; };
+		63B45937130E8C52002D8761 /* back_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_tap.png; sourceTree = "<group>"; };
+		63B45938130E8C52002D8761 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		63B45939130E8C52002D8761 /* bg_allert_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_allert_01.png; sourceTree = "<group>"; };
+		63B4593A130E8C52002D8761 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		63B4593B130E8C52002D8761 /* birthday_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birthday_bg.png; sourceTree = "<group>"; };
+		63B4593E130E8C52002D8761 /* button_calendar_activ_left_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_calendar_activ_left_tap.png; sourceTree = "<group>"; };
+		63B4593F130E8C52002D8761 /* button_calendar_activ_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_calendar_activ_left.png; sourceTree = "<group>"; };
+		63B45940130E8C52002D8761 /* button_calendar_activ_right_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_calendar_activ_right_tap.png; sourceTree = "<group>"; };
+		63B45941130E8C52002D8761 /* button_calendar_activ_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_calendar_activ_right.png; sourceTree = "<group>"; };
+		63B45942130E8C52002D8761 /* button_calendar_noactiv_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_calendar_noactiv_right.png; sourceTree = "<group>"; };
+		63B45943130E8C52002D8761 /* button_calendar_noactiv_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_calendar_noactiv_left.png; sourceTree = "<group>"; };
+		63B4594A130E8C52002D8761 /* calendar_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_top.png; sourceTree = "<group>"; };
+		63B4594B130E8C52002D8761 /* cell_activ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_activ.png; sourceTree = "<group>"; };
+		63B4594C130E8C52002D8761 /* cell_calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_calendar.png; sourceTree = "<group>"; };
+		63B4594D130E8C52002D8761 /* cell_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_click.png; sourceTree = "<group>"; };
+		63B4594E130E8C52002D8761 /* checkbox_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_tap.png; sourceTree = "<group>"; };
+		63B4594F130E8C52002D8761 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
+		63B45950130E8C52002D8761 /* input_postcode_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_postcode_01.png; sourceTree = "<group>"; };
+		63B45951130E8C52002D8761 /* input_postcode_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_postcode_02.png; sourceTree = "<group>"; };
+		63B45952130E8C52002D8761 /* input.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input.png; sourceTree = "<group>"; };
+		63B45953130E8C52002D8761 /* line_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_select.png; sourceTree = "<group>"; };
+		63B45954130E8C52002D8761 /* list_time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_time.png; sourceTree = "<group>"; };
+		63B45955130E8C52002D8761 /* days.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = days.png; sourceTree = "<group>"; };
+		63B45956130E8C52002D8761 /* navigationbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar.png; sourceTree = "<group>"; };
+		63B45957130E8C52002D8761 /* plashka_01_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plashka_01_tap.png; sourceTree = "<group>"; };
+		63B45958130E8C52002D8761 /* plashka_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plashka_01.png; sourceTree = "<group>"; };
+		63B45959130E8C52002D8761 /* plashka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plashka.png; sourceTree = "<group>"; };
+		63B4595B130E8C52002D8761 /* select_activ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_activ.png; sourceTree = "<group>"; };
+		63B4595C130E8C52002D8761 /* select_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_border.png; sourceTree = "<group>"; };
+		63B4595D130E8C52002D8761 /* select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select.png; sourceTree = "<group>"; };
+		63B4595E130E8C52002D8761 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		63B45961130E8C52002D8761 /* verder_tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verder_tap.png; sourceTree = "<group>"; };
+		63B45962130E8C52002D8761 /* verder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verder.png; sourceTree = "<group>"; };
+		63B459C7130E8DBB002D8761 /* navigationbar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar1.png; sourceTree = "<group>"; };
+		63B45BF4130EB08A002D8761 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		63B45BF5130EB08A002D8761 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		63B45BF6130EB08A002D8761 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SplashViewController.xib; path = Classes/SplashViewController.xib; sourceTree = "<group>"; };
+		63B45C0D130EB256002D8761 /* drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drawing.m; sourceTree = "<group>"; };
+		63B45C0E130EB256002D8761 /* PDColoredProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDColoredProgressView.h; sourceTree = "<group>"; };
+		63B45C0F130EB256002D8761 /* PDColoredProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDColoredProgressView.m; sourceTree = "<group>"; };
+		63B45D4C130EC768002D8761 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		63B45D8F130ED369002D8761 /* DKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCalendarView.h; sourceTree = "<group>"; };
+		63B45D90130ED369002D8761 /* DKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCalendarView.m; sourceTree = "<group>"; };
+		63C081771312860500314717 /* SelectAppointmentTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAppointmentTimeViewController.h; sourceTree = "<group>"; };
+		63C081781312860500314717 /* SelectAppointmentTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAppointmentTimeViewController.m; sourceTree = "<group>"; };
+		63C081791312860500314717 /* SelectAppointmentTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SelectAppointmentTimeViewController.xib; path = Classes/SelectAppointmentTimeViewController.xib; sourceTree = "<group>"; };
+		63C081E81312950500314717 /* OAAppointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAppointment.h; sourceTree = "<group>"; };
+		63C081E91312950500314717 /* OAAppointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAppointment.m; sourceTree = "<group>"; };
+		63C082931312A47800314717 /* list_time1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_time1.png; sourceTree = "<group>"; };
+		63C0838A1312B5C400314717 /* MakeAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeAppointmentViewController.h; sourceTree = "<group>"; };
+		63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeAppointmentViewController.m; sourceTree = "<group>"; };
+		63C0838C1312B5C400314717 /* MakeAppointmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MakeAppointmentViewController.xib; path = Classes/MakeAppointmentViewController.xib; sourceTree = "<group>"; };
+		63C33CBF131D22F200FA982C /* algemeneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = algemeneButton.png; sourceTree = "<group>"; };
+		63C33CD1131D26FF00FA982C /* makeAppointmentPopup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makeAppointmentPopup.png; sourceTree = "<group>"; };
+		63C33CD3131D2A4D00FA982C /* DKPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPopUp.h; sourceTree = "<group>"; };
+		63C33CD4131D2A4D00FA982C /* DKPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPopUp.m; sourceTree = "<group>"; };
+		63C33D40131D363800FA982C /* voorwaarden.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = voorwaarden.html; sourceTree = "<group>"; };
+		63C33E0F131D487E00FA982C /* AppointmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentsViewController.h; sourceTree = "<group>"; };
+		63C33E10131D487E00FA982C /* AppointmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentsViewController.m; sourceTree = "<group>"; };
+		63C33ED1131D5A8A00FA982C /* DDPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageControl.h; sourceTree = "<group>"; };
+		63C33ED2131D5A8A00FA982C /* DDPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageControl.m; sourceTree = "<group>"; };
+		63ED95FC1317B6CB00BCF2FC /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow.png; sourceTree = "<group>"; };
+		8C92741F133E1BB300C9377C /* FacebookModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookModule.h; sourceTree = "<group>"; };
+		8C927420133E1BB300C9377C /* FacebookModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookModule.m; sourceTree = "<group>"; };
+		8C927421133E1BB300C9377C /* FacebookWallMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookWallMessage.h; sourceTree = "<group>"; };
+		8C927422133E1BB300C9377C /* FacebookWallMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookWallMessage.m; sourceTree = "<group>"; };
+		8C927424133E1BB300C9377C /* FBConnect.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBConnect.bundle; sourceTree = "<group>"; };
+		8C927425133E1BB300C9377C /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		8C927426133E1BB300C9377C /* FBConnectGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnectGlobal.h; sourceTree = "<group>"; };
+		8C927427133E1BB300C9377C /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		8C927428133E1BB300C9377C /* FBLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginButton.h; sourceTree = "<group>"; };
+		8C927429133E1BB300C9377C /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		8C92742A133E1BB300C9377C /* FBNativeStringUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBNativeStringUploader.h; sourceTree = "<group>"; };
+		8C92742B133E1BB300C9377C /* FBPermissionDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPermissionDialog.h; sourceTree = "<group>"; };
+		8C92742C133E1BB300C9377C /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		8C92742D133E1BB300C9377C /* FBSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSession.h; sourceTree = "<group>"; };
+		8C92742E133E1BB300C9377C /* FBStreamDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBStreamDialog.h; sourceTree = "<group>"; };
+		8C92742F133E1BB300C9377C /* FBTranslationsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTranslationsLoader.h; sourceTree = "<group>"; };
+		8C927430133E1BB300C9377C /* FBUploadResultReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUploadResultReceiver.h; sourceTree = "<group>"; };
+		8C927431133E1BB300C9377C /* FBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUser.h; sourceTree = "<group>"; };
+		8C927432133E1BB300C9377C /* FBConnectGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBConnectGlobal.m; sourceTree = "<group>"; };
+		8C927433133E1BB300C9377C /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDialog.m; sourceTree = "<group>"; };
+		8C927434133E1BB300C9377C /* FBLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginButton.m; sourceTree = "<group>"; };
+		8C927435133E1BB300C9377C /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
+		8C927436133E1BB300C9377C /* FBNativeStringUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBNativeStringUploader.m; sourceTree = "<group>"; };
+		8C927437133E1BB300C9377C /* FBPermissionDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPermissionDialog.m; sourceTree = "<group>"; };
+		8C927438133E1BB300C9377C /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
+		8C927439133E1BB300C9377C /* FBSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSession.m; sourceTree = "<group>"; };
+		8C92743A133E1BB300C9377C /* FBStreamDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBStreamDialog.m; sourceTree = "<group>"; };
+		8C92743B133E1BB300C9377C /* FBTranslationsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTranslationsLoader.m; sourceTree = "<group>"; };
+		8C92743C133E1BB300C9377C /* FBUploadResultReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUploadResultReceiver.m; sourceTree = "<group>"; };
+		8C92743D133E1BB300C9377C /* FBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUser.m; sourceTree = "<group>"; };
+		8C92743F133E1BB300C9377C /* FacebookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookUtility.h; sourceTree = "<group>"; };
+		8C927440133E1BB300C9377C /* FacebookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookUtility.m; sourceTree = "<group>"; };
+		8C927441133E1BB300C9377C /* FBXMLHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXMLHandler.h; sourceTree = "<group>"; };
+		8C927442133E1BB300C9377C /* FBXMLHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXMLHandler.m; sourceTree = "<group>"; };
+		8C927443133E1BB300C9377C /* MyFBLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFBLoginButton.h; sourceTree = "<group>"; };
+		8C927444133E1BB300C9377C /* MyFBLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFBLoginButton.m; sourceTree = "<group>"; };
+		8C92746A133E25E500C9377C /* fbButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbButton.png; sourceTree = "<group>"; };
+		8C9274AF133E27E600C9377C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8C9274B0133E27E600C9377C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8C9340EB133F5AB8002043DD /* fbbuttons.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fbbuttons.html; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* OnlineAfspraken-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OnlineAfspraken-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				63AFF67E130C1B0B008E8E1F /* CFNetwork.framework in Frameworks */,
+				63AFF691130C1B20008E8E1F /* SystemConfiguration.framework in Frameworks */,
+				63AFF697130C1B2E008E8E1F /* MessageUI.framework in Frameworks */,
+				63AFF6A1130C1B5F008E8E1F /* libz.1.2.3.dylib in Frameworks */,
+				63AFF6AD130C1BC5008E8E1F /* MobileCoreServices.framework in Frameworks */,
+				63B0041E130FBAFA00B55C40 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04F306341389495F00C49162 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				04F306351389495F00C49162 /* config.ini */,
+				04F306361389495F00C49162 /* customer_background_320x480.png */,
+				04F306371389495F00C49162 /* customer_background_640x960.png */,
+				04F306381389495F00C49162 /* customer_icon_114x114.png */,
+				04F306391389495F00C49162 /* customer_icon_512x512.png */,
+				04F3063A1389495F00C49162 /* customer_icon_57x57.png */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8C92741E133E1BB300C9377C /* FacebookModule */,
+				63B003AA130FB70D00B55C40 /* Calendar */,
+				63B41C5E130D63F80005AF2C /* OnlineAfsprakenAPI */,
+				63B45C12130EB259002D8761 /* PDColoredProgressView */,
+				63B41D8E130D7F6D0005AF2C /* TBXML */,
+				63AFF5E2130BFE25008E8E1F /* General */,
+				63AFF5C1130BFCBC008E8E1F /* Screens */,
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+				63AFF5E7130BFE8B008E8E1F /* Constants.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* MizarIT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				04F30648138949C800C49162 /* icon_114x114.png */,
+				2C1DAE18138173DC0018F370 /* Default.png */,
+				2C1DAE16138173D40018F370 /* Default@2x.png */,
+				2C1DAE121381738F0018F370 /* icon_57x57.png */,
+				04F306341389495F00C49162 /* Customer */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* OnlineAfspraken_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63B41B84130D495A0005AF2C /* Images */,
+				63C33D40131D363800FA982C /* voorwaarden.html */,
+				04A4C84013831D59005118A4 /* AppTypeViewController.xib */,
+				04C4348813894D8100E99061 /* MainViewController.xib */,
+				04C4348913894D8100E99061 /* MainWindow.xib */,
+				0408BDA71384202C00EEABE3 /* ResourceViewController.xib */,
+				63C0838C1312B5C400314717 /* MakeAppointmentViewController.xib */,
+				04F306421389498E00C49162 /* AllAppointmentsViewController.xib */,
+				04F306431389498E00C49162 /* AppointmentsViewController.xib */,
+				04F306441389498E00C49162 /* SettingsViewController.xib */,
+				63C081791312860500314717 /* SelectAppointmentTimeViewController.xib */,
+				63B45BF6130EB08A002D8761 /* SplashViewController.xib */,
+				8D1107310486CEB800E47090 /* OnlineAfspraken-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63AFF696130C1B2E008E8E1F /* MessageUI.framework */,
+				63AFF67D130C1B0B008E8E1F /* CFNetwork.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				63AFF690130C1B20008E8E1F /* SystemConfiguration.framework */,
+				63AFF6A0130C1B5F008E8E1F /* libz.1.2.3.dylib */,
+				63AFF6AC130C1BC5008E8E1F /* MobileCoreServices.framework */,
+				63B0041D130FBAFA00B55C40 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63AFF5C1130BFCBC008E8E1F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				63C33E0F131D487E00FA982C /* AppointmentsViewController.h */,
+				63C33E10131D487E00FA982C /* AppointmentsViewController.m */,
+				0408BDA51384202B00EEABE3 /* ResourceViewController.h */,
+				0408BDA61384202B00EEABE3 /* ResourceViewController.m */,
+				28D7ACF60DDB3853001CB0EB /* MainViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* MainViewController.m */,
+				04F3064A138949F000C49162 /* AllAppointmentsViewController.h */,
+				04F3064B138949F000C49162 /* AllAppointmentsViewController.m */,
+				63C0838A1312B5C400314717 /* MakeAppointmentViewController.h */,
+				63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */,
+				63C081771312860500314717 /* SelectAppointmentTimeViewController.h */,
+				63C081781312860500314717 /* SelectAppointmentTimeViewController.m */,
+				04A4C83E13831D59005118A4 /* AppTypeViewController.h */,
+				04A4C83F13831D59005118A4 /* AppTypeViewController.m */,
+				63B45BF4130EB08A002D8761 /* SplashViewController.h */,
+				04F3064D13894A0800C49162 /* SettingsViewController.h */,
+				04F3064E13894A0800C49162 /* SettingsViewController.m */,
+				63B45BF5130EB08A002D8761 /* SplashViewController.m */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		63AFF5E2130BFE25008E8E1F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				63C33ED1131D5A8A00FA982C /* DDPageControl.h */,
+				63C33ED2131D5A8A00FA982C /* DDPageControl.m */,
+				63AFF5D0130BFE21008E8E1F /* DKActivityView.h */,
+				63AFF5D1130BFE21008E8E1F /* DKActivityView.m */,
+				63AFF5D2130BFE21008E8E1F /* DKAlertView.h */,
+				63AFF5D3130BFE21008E8E1F /* DKAlertView.m */,
+				63B45D8F130ED369002D8761 /* DKCalendarView.h */,
+				63B45D90130ED369002D8761 /* DKCalendarView.m */,
+				63B41C62130D647A0005AF2C /* DKAsyncDataLoader.h */,
+				63B41C63130D647A0005AF2C /* DKAsyncDataLoader.m */,
+				63AFF5D8130BFE22008E8E1F /* DKSyncDataLoader.h */,
+				63AFF5D9130BFE22008E8E1F /* DKSyncDataLoader.m */,
+				63AFF5DA130BFE22008E8E1F /* DKViewController.h */,
+				63AFF5DB130BFE22008E8E1F /* DKViewController.m */,
+				63A61E2B1313F21C0027CD77 /* DKTextField.h */,
+				63A61E2C1313F21C0027CD77 /* DKTextField.m */,
+				632DE811131692A6004FC55D /* DKProgressView.h */,
+				632DE812131692A6004FC55D /* DKProgressView.m */,
+				63C33CD3131D2A4D00FA982C /* DKPopUp.h */,
+				63C33CD4131D2A4D00FA982C /* DKPopUp.m */,
+				04F3065013894A1800C49162 /* RMPushNotification.h */,
+				04F3065113894A1800C49162 /* RMPushNotification.m */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		63B003AA130FB70D00B55C40 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				63B003AB130FB70D00B55C40 /* CheckmarkTile.h */,
+				63B003AC130FB70D00B55C40 /* CheckmarkTile.m */,
+				63B003AE130FB70D00B55C40 /* KLCalendarModel.h */,
+				63B003AF130FB70D00B55C40 /* KLCalendarModel.m */,
+				63B003B0130FB70D00B55C40 /* KLCalendarView.h */,
+				63B003B1130FB70D00B55C40 /* KLCalendarView.m */,
+				63B003B2130FB70D00B55C40 /* KLColors.h */,
+				63B003B3130FB70D00B55C40 /* KLColors.m */,
+				63B003B4130FB70D00B55C40 /* KLDate.h */,
+				63B003B5130FB70D00B55C40 /* KLDate.m */,
+				63B003B6130FB70D00B55C40 /* KLGraphicsUtils.h */,
+				63B003B7130FB70D00B55C40 /* KLGraphicsUtils.m */,
+				63B003B8130FB70D00B55C40 /* KLGridView.h */,
+				63B003B9130FB70D00B55C40 /* KLGridView.m */,
+				63B003BA130FB70D00B55C40 /* KLTile.h */,
+				63B003BB130FB70D00B55C40 /* KLTile.m */,
+				63B003BF130FB70D00B55C40 /* THCalendarInfo.h */,
+				63B003C0130FB70D00B55C40 /* THCalendarInfo.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		63B41B84130D495A0005AF2C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8C927469133E25E500C9377C /* facebook */,
+				172F742013101702000D1D5A /* button_click.png */,
+				172F742113101702000D1D5A /* button.png */,
+				172F742213101702000D1D5A /* text.png */,
+				63C33CD1131D26FF00FA982C /* makeAppointmentPopup.png */,
+				63C33CBF131D22F200FA982C /* algemeneButton.png */,
+				63ED95FC1317B6CB00BCF2FC /* shadow.png */,
+				632DE83813169829004FC55D /* pb_bg.png */,
+				632DE83913169829004FC55D /* pb.png */,
+				63C082931312A47800314717 /* list_time1.png */,
+				63B45D4C130EC768002D8761 /* line.png */,
+				63B459C7130E8DBB002D8761 /* navigationbar1.png */,
+				63B45934130E8C52002D8761 /* allert_icon_ok.png */,
+				63B45935130E8C52002D8761 /* allert_icon.png */,
+				63B45936130E8C52002D8761 /* allert_ok.png */,
+				63B45937130E8C52002D8761 /* back_tap.png */,
+				63B45938130E8C52002D8761 /* back.png */,
+				63B45939130E8C52002D8761 /* bg_allert_01.png */,
+				63B4593A130E8C52002D8761 /* bg.png */,
+				63B4593B130E8C52002D8761 /* birthday_bg.png */,
+				63B4593E130E8C52002D8761 /* button_calendar_activ_left_tap.png */,
+				63B4593F130E8C52002D8761 /* button_calendar_activ_left.png */,
+				63B45940130E8C52002D8761 /* button_calendar_activ_right_tap.png */,
+				63B45941130E8C52002D8761 /* button_calendar_activ_right.png */,
+				63B45942130E8C52002D8761 /* button_calendar_noactiv_right.png */,
+				63B45943130E8C52002D8761 /* button_calendar_noactiv_left.png */,
+				63B4594A130E8C52002D8761 /* calendar_top.png */,
+				63B4594B130E8C52002D8761 /* cell_activ.png */,
+				63B4594C130E8C52002D8761 /* cell_calendar.png */,
+				63B4594D130E8C52002D8761 /* cell_click.png */,
+				63B4594E130E8C52002D8761 /* checkbox_tap.png */,
+				63B4594F130E8C52002D8761 /* checkbox.png */,
+				63B45950130E8C52002D8761 /* input_postcode_01.png */,
+				63B45951130E8C52002D8761 /* input_postcode_02.png */,
+				63B45952130E8C52002D8761 /* input.png */,
+				63B45953130E8C52002D8761 /* line_select.png */,
+				63B45954130E8C52002D8761 /* list_time.png */,
+				63B45955130E8C52002D8761 /* days.png */,
+				04C4347513894D4900E99061 /* button-afspraak-maken-active.png */,
+				04C4347613894D4900E99061 /* button-afspraak-maken.png */,
+				04C4347713894D4900E99061 /* button-instellingen-active.png */,
+				04C4347813894D4900E99061 /* button-instellingen-off.png */,
+				04C4347913894D4900E99061 /* button-instellingen.png */,
+				04C4347A13894D4900E99061 /* button-mijn-afspraken-active.png */,
+				04C4347B13894D4900E99061 /* button-mijn-afspraken-off.png */,
+				04C4347C13894D4900E99061 /* button-mijn-afspraken.png */,
+				04C4348613894D5500E99061 /* tabbar-bkg.png */,
+				63B45956130E8C52002D8761 /* navigationbar.png */,
+				63B45957130E8C52002D8761 /* plashka_01_tap.png */,
+				63B45958130E8C52002D8761 /* plashka_01.png */,
+				63B45959130E8C52002D8761 /* plashka.png */,
+				63B4595B130E8C52002D8761 /* select_activ.png */,
+				63B4595C130E8C52002D8761 /* select_border.png */,
+				63B4595D130E8C52002D8761 /* select.png */,
+				63B4595E130E8C52002D8761 /* star.png */,
+				63B45961130E8C52002D8761 /* verder_tap.png */,
+				63B45962130E8C52002D8761 /* verder.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		63B41C5E130D63F80005AF2C /* OnlineAfsprakenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				048BA0B0138569DD00B0F512 /* OAEmployee.h */,
+				048BA0B1138569DD00B0F512 /* OAEmployee.m */,
+				63B41C5F130D64370005AF2C /* OARequest.h */,
+				63B41C60130D64370005AF2C /* OARequest.m */,
+				63B00752130FF45000B55C40 /* OAAgenda.h */,
+				63B00753130FF45000B55C40 /* OAAgenda.m */,
+				63C081E81312950500314717 /* OAAppointment.h */,
+				63C081E91312950500314717 /* OAAppointment.m */,
+				63B41CCF130D75710005AF2C /* OAAppointmentType.h */,
+				63B41CD0130D75710005AF2C /* OAAppointmentType.m */,
+				63B006E8130FED0D00B55C40 /* OAAppointmentDay.h */,
+				63B006E9130FED0D00B55C40 /* OAAppointmentDay.m */,
+			);
+			name = OnlineAfsprakenAPI;
+			sourceTree = "<group>";
+		};
+		63B41D8E130D7F6D0005AF2C /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				63B41D8F130D7F6D0005AF2C /* NSDataAdditions.h */,
+				63B41D90130D7F6D0005AF2C /* NSDataAdditions.m */,
+				63B41D91130D7F6D0005AF2C /* TBXML.h */,
+				63B41D92130D7F6D0005AF2C /* TBXML.m */,
+			);
+			path = TBXML;
+			sourceTree = "<group>";
+		};
+		63B45C12130EB259002D8761 /* PDColoredProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				63B45C0D130EB256002D8761 /* drawing.m */,
+				63B45C0E130EB256002D8761 /* PDColoredProgressView.h */,
+				63B45C0F130EB256002D8761 /* PDColoredProgressView.m */,
+			);
+			name = PDColoredProgressView;
+			sourceTree = "<group>";
+		};
+		8C92741E133E1BB300C9377C /* FacebookModule */ = {
+			isa = PBXGroup;
+			children = (
+				8C9274AE133E27E600C9377C /* Reachability */,
+				8C92741F133E1BB300C9377C /* FacebookModule.h */,
+				8C927420133E1BB300C9377C /* FacebookModule.m */,
+				8C927421133E1BB300C9377C /* FacebookWallMessage.h */,
+				8C927422133E1BB300C9377C /* FacebookWallMessage.m */,
+				8C927423133E1BB300C9377C /* FBConnect */,
+				8C927432133E1BB300C9377C /* FBConnectGlobal.m */,
+				8C927433133E1BB300C9377C /* FBDialog.m */,
+				8C927434133E1BB300C9377C /* FBLoginButton.m */,
+				8C927435133E1BB300C9377C /* FBLoginDialog.m */,
+				8C927436133E1BB300C9377C /* FBNativeStringUploader.m */,
+				8C927437133E1BB300C9377C /* FBPermissionDialog.m */,
+				8C927438133E1BB300C9377C /* FBRequest.m */,
+				8C927439133E1BB300C9377C /* FBSession.m */,
+				8C92743A133E1BB300C9377C /* FBStreamDialog.m */,
+				8C92743B133E1BB300C9377C /* FBTranslationsLoader.m */,
+				8C92743C133E1BB300C9377C /* FBUploadResultReceiver.m */,
+				8C92743D133E1BB300C9377C /* FBUser.m */,
+				8C92743E133E1BB300C9377C /* fbutil */,
+				8C927441133E1BB300C9377C /* FBXMLHandler.h */,
+				8C927442133E1BB300C9377C /* FBXMLHandler.m */,
+				8C927443133E1BB300C9377C /* MyFBLoginButton.h */,
+				8C927444133E1BB300C9377C /* MyFBLoginButton.m */,
+			);
+			path = FacebookModule;
+			sourceTree = "<group>";
+		};
+		8C927423133E1BB300C9377C /* FBConnect */ = {
+			isa = PBXGroup;
+			children = (
+				8C927424133E1BB300C9377C /* FBConnect.bundle */,
+				8C927425133E1BB300C9377C /* FBConnect.h */,
+				8C927426133E1BB300C9377C /* FBConnectGlobal.h */,
+				8C927427133E1BB300C9377C /* FBDialog.h */,
+				8C927428133E1BB300C9377C /* FBLoginButton.h */,
+				8C927429133E1BB300C9377C /* FBLoginDialog.h */,
+				8C92742A133E1BB300C9377C /* FBNativeStringUploader.h */,
+				8C92742B133E1BB300C9377C /* FBPermissionDialog.h */,
+				8C92742C133E1BB300C9377C /* FBRequest.h */,
+				8C92742D133E1BB300C9377C /* FBSession.h */,
+				8C92742E133E1BB300C9377C /* FBStreamDialog.h */,
+				8C92742F133E1BB300C9377C /* FBTranslationsLoader.h */,
+				8C927430133E1BB300C9377C /* FBUploadResultReceiver.h */,
+				8C927431133E1BB300C9377C /* FBUser.h */,
+			);
+			path = FBConnect;
+			sourceTree = "<group>";
+		};
+		8C92743E133E1BB300C9377C /* fbutil */ = {
+			isa = PBXGroup;
+			children = (
+				8C92743F133E1BB300C9377C /* FacebookUtility.h */,
+				8C927440133E1BB300C9377C /* FacebookUtility.m */,
+			);
+			path = fbutil;
+			sourceTree = "<group>";
+		};
+		8C927469133E25E500C9377C /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				8C9340EB133F5AB8002043DD /* fbbuttons.html */,
+				8C92746A133E25E500C9377C /* fbButton.png */,
+			);
+			path = facebook;
+			sourceTree = "<group>";
+		};
+		8C9274AE133E27E600C9377C /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				8C9274AF133E27E600C9377C /* Reachability.h */,
+				8C9274B0133E27E600C9377C /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* MizarIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MizarIT" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeautycentrumIngeborg;
+			productName = BeautycentrumIngeborg;
+			productReference = 1D6058910D05DD3D006BFB54 /* MizarIT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OnlineAfspraken" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* MizarIT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B45963130E8C52002D8761 /* allert_icon_ok.png in Resources */,
+				63B45964130E8C52002D8761 /* allert_icon.png in Resources */,
+				63B45965130E8C52002D8761 /* allert_ok.png in Resources */,
+				63B45966130E8C52002D8761 /* back_tap.png in Resources */,
+				63B45967130E8C52002D8761 /* back.png in Resources */,
+				63B45968130E8C52002D8761 /* bg_allert_01.png in Resources */,
+				63B45969130E8C52002D8761 /* bg.png in Resources */,
+				63B4596A130E8C52002D8761 /* birthday_bg.png in Resources */,
+				63B4596D130E8C52002D8761 /* button_calendar_activ_left_tap.png in Resources */,
+				63B4596E130E8C52002D8761 /* button_calendar_activ_left.png in Resources */,
+				63B4596F130E8C52002D8761 /* button_calendar_activ_right_tap.png in Resources */,
+				63B45970130E8C52002D8761 /* button_calendar_activ_right.png in Resources */,
+				63B45971130E8C52002D8761 /* button_calendar_noactiv_right.png in Resources */,
+				63B45972130E8C52002D8761 /* button_calendar_noactiv_left.png in Resources */,
+				63B45979130E8C52002D8761 /* calendar_top.png in Resources */,
+				63B4597A130E8C52002D8761 /* cell_activ.png in Resources */,
+				63B4597B130E8C52002D8761 /* cell_calendar.png in Resources */,
+				63B4597C130E8C52002D8761 /* cell_click.png in Resources */,
+				63B4597D130E8C52002D8761 /* checkbox_tap.png in Resources */,
+				63B4597E130E8C52002D8761 /* checkbox.png in Resources */,
+				63B4597F130E8C52002D8761 /* input_postcode_01.png in Resources */,
+				63B45980130E8C52002D8761 /* input_postcode_02.png in Resources */,
+				63B45981130E8C52002D8761 /* input.png in Resources */,
+				63B45982130E8C52002D8761 /* line_select.png in Resources */,
+				63B45983130E8C52002D8761 /* list_time.png in Resources */,
+				63B45984130E8C52002D8761 /* days.png in Resources */,
+				63B45985130E8C52002D8761 /* navigationbar.png in Resources */,
+				63B45986130E8C52002D8761 /* plashka_01_tap.png in Resources */,
+				63B45987130E8C52002D8761 /* plashka_01.png in Resources */,
+				63B45988130E8C52002D8761 /* plashka.png in Resources */,
+				63B4598A130E8C52002D8761 /* select_activ.png in Resources */,
+				63B4598B130E8C52002D8761 /* select_border.png in Resources */,
+				63B4598C130E8C52002D8761 /* select.png in Resources */,
+				63B4598D130E8C52002D8761 /* star.png in Resources */,
+				63B45990130E8C52002D8761 /* verder_tap.png in Resources */,
+				63B45991130E8C52002D8761 /* verder.png in Resources */,
+				63B459C8130E8DBB002D8761 /* navigationbar1.png in Resources */,
+				63B45BF8130EB08A002D8761 /* SplashViewController.xib in Resources */,
+				63B45D4D130EC768002D8761 /* line.png in Resources */,
+				63C0817B1312860500314717 /* SelectAppointmentTimeViewController.xib in Resources */,
+				63C082941312A47800314717 /* list_time1.png in Resources */,
+				63C0838E1312B5C400314717 /* MakeAppointmentViewController.xib in Resources */,
+				632DE83A13169829004FC55D /* pb_bg.png in Resources */,
+				632DE83B13169829004FC55D /* pb.png in Resources */,
+				63ED95FD1317B6CB00BCF2FC /* shadow.png in Resources */,
+				63C33CC0131D22F200FA982C /* algemeneButton.png in Resources */,
+				63C33CD2131D26FF00FA982C /* makeAppointmentPopup.png in Resources */,
+				63C33D41131D363800FA982C /* voorwaarden.html in Resources */,
+				172F742313101702000D1D5A /* button_click.png in Resources */,
+				172F742413101702000D1D5A /* button.png in Resources */,
+				172F742513101702000D1D5A /* text.png in Resources */,
+				8C927447133E1BB300C9377C /* FBConnect.bundle in Resources */,
+				8C92746B133E25E500C9377C /* fbButton.png in Resources */,
+				8C9340EC133F5AB8002043DD /* fbbuttons.html in Resources */,
+				2C1DAE131381738F0018F370 /* icon_57x57.png in Resources */,
+				2C1DAE17138173D40018F370 /* Default@2x.png in Resources */,
+				2C1DAE19138173DC0018F370 /* Default.png in Resources */,
+				04A4C84213831D59005118A4 /* AppTypeViewController.xib in Resources */,
+				0408BDA91384202C00EEABE3 /* ResourceViewController.xib in Resources */,
+				04F3063B1389495F00C49162 /* config.ini in Resources */,
+				04F3063C1389495F00C49162 /* customer_background_320x480.png in Resources */,
+				04F3063D1389495F00C49162 /* customer_background_640x960.png in Resources */,
+				04F3063E1389495F00C49162 /* customer_icon_114x114.png in Resources */,
+				04F3063F1389495F00C49162 /* customer_icon_512x512.png in Resources */,
+				04F306401389495F00C49162 /* customer_icon_57x57.png in Resources */,
+				04F306451389498E00C49162 /* AllAppointmentsViewController.xib in Resources */,
+				04F306461389498E00C49162 /* AppointmentsViewController.xib in Resources */,
+				04F306471389498E00C49162 /* SettingsViewController.xib in Resources */,
+				04F30649138949C800C49162 /* icon_114x114.png in Resources */,
+				04C4347D13894D4900E99061 /* button-afspraak-maken-active.png in Resources */,
+				04C4347E13894D4900E99061 /* button-afspraak-maken.png in Resources */,
+				04C4347F13894D4900E99061 /* button-instellingen-active.png in Resources */,
+				04C4348013894D4900E99061 /* button-instellingen-off.png in Resources */,
+				04C4348113894D4900E99061 /* button-instellingen.png in Resources */,
+				04C4348213894D4900E99061 /* button-mijn-afspraken-active.png in Resources */,
+				04C4348313894D4900E99061 /* button-mijn-afspraken-off.png in Resources */,
+				04C4348413894D4900E99061 /* button-mijn-afspraken.png in Resources */,
+				04C4348713894D5500E99061 /* tabbar-bkg.png in Resources */,
+				04C4348A13894D8100E99061 /* MainViewController.xib in Resources */,
+				04C4348B13894D8100E99061 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* MainViewController.m in Sources */,
+				63AFF5DC130BFE22008E8E1F /* DKActivityView.m in Sources */,
+				63AFF5DD130BFE22008E8E1F /* DKAlertView.m in Sources */,
+				63AFF5E0130BFE22008E8E1F /* DKSyncDataLoader.m in Sources */,
+				63AFF5E1130BFE22008E8E1F /* DKViewController.m in Sources */,
+				63B41C61130D64370005AF2C /* OARequest.m in Sources */,
+				63B41C64130D647A0005AF2C /* DKAsyncDataLoader.m in Sources */,
+				63B41CD1130D75710005AF2C /* OAAppointmentType.m in Sources */,
+				63B41D93130D7F6D0005AF2C /* NSDataAdditions.m in Sources */,
+				63B41D94130D7F6D0005AF2C /* TBXML.m in Sources */,
+				63B45BF7130EB08A002D8761 /* SplashViewController.m in Sources */,
+				63B45C10130EB256002D8761 /* drawing.m in Sources */,
+				63B45C11130EB256002D8761 /* PDColoredProgressView.m in Sources */,
+				63B45D91130ED369002D8761 /* DKCalendarView.m in Sources */,
+				63B003C1130FB70D00B55C40 /* CheckmarkTile.m in Sources */,
+				63B003C2130FB70D00B55C40 /* KLCalendarModel.m in Sources */,
+				63B003C3130FB70D00B55C40 /* KLCalendarView.m in Sources */,
+				63B003C4130FB70D00B55C40 /* KLColors.m in Sources */,
+				63B003C5130FB70D00B55C40 /* KLDate.m in Sources */,
+				63B003C6130FB70D00B55C40 /* KLGraphicsUtils.m in Sources */,
+				63B003C7130FB70D00B55C40 /* KLGridView.m in Sources */,
+				63B003C8130FB70D00B55C40 /* KLTile.m in Sources */,
+				63B003CC130FB70D00B55C40 /* THCalendarInfo.m in Sources */,
+				63B006EA130FED0D00B55C40 /* OAAppointmentDay.m in Sources */,
+				63B00754130FF45000B55C40 /* OAAgenda.m in Sources */,
+				63C0817A1312860500314717 /* SelectAppointmentTimeViewController.m in Sources */,
+				63C081EA1312950500314717 /* OAAppointment.m in Sources */,
+				63C0838D1312B5C400314717 /* MakeAppointmentViewController.m in Sources */,
+				63A61E2D1313F21C0027CD77 /* DKTextField.m in Sources */,
+				632DE813131692A6004FC55D /* DKProgressView.m in Sources */,
+				63C33CD6131D2A4D00FA982C /* DKPopUp.m in Sources */,
+				63C33E12131D487E00FA982C /* AppointmentsViewController.m in Sources */,
+				63C33ED3131D5A8A00FA982C /* DDPageControl.m in Sources */,
+				8C927445133E1BB300C9377C /* FacebookModule.m in Sources */,
+				8C927446133E1BB300C9377C /* FacebookWallMessage.m in Sources */,
+				8C927448133E1BB300C9377C /* FBConnectGlobal.m in Sources */,
+				8C927449133E1BB300C9377C /* FBDialog.m in Sources */,
+				8C92744A133E1BB300C9377C /* FBLoginButton.m in Sources */,
+				8C92744B133E1BB300C9377C /* FBLoginDialog.m in Sources */,
+				8C92744C133E1BB300C9377C /* FBNativeStringUploader.m in Sources */,
+				8C92744D133E1BB300C9377C /* FBPermissionDialog.m in Sources */,
+				8C92744E133E1BB300C9377C /* FBRequest.m in Sources */,
+				8C92744F133E1BB300C9377C /* FBSession.m in Sources */,
+				8C927450133E1BB300C9377C /* FBStreamDialog.m in Sources */,
+				8C927451133E1BB300C9377C /* FBTranslationsLoader.m in Sources */,
+				8C927452133E1BB300C9377C /* FBUploadResultReceiver.m in Sources */,
+				8C927453133E1BB300C9377C /* FBUser.m in Sources */,
+				8C927454133E1BB300C9377C /* FacebookUtility.m in Sources */,
+				8C927455133E1BB300C9377C /* FBXMLHandler.m in Sources */,
+				8C927456133E1BB300C9377C /* MyFBLoginButton.m in Sources */,
+				8C9274B1133E27E600C9377C /* Reachability.m in Sources */,
+				04A4C84113831D59005118A4 /* AppTypeViewController.m in Sources */,
+				0408BDA81384202C00EEABE3 /* ResourceViewController.m in Sources */,
+				048BA0B2138569DD00B0F512 /* OAEmployee.m in Sources */,
+				04F3064C138949F000C49162 /* AllAppointmentsViewController.m in Sources */,
+				04F3064F13894A0800C49162 /* SettingsViewController.m in Sources */,
+				04F3065213894A1800C49162 /* RMPushNotification.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ricardo Matters (5Z4E38CWQ8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ricardo Matters (5Z4E38CWQ8)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OnlineAfspraken_Prefix.pch;
+				INFOPLIST_FILE = "OnlineAfspraken-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = BeautycentrumIngeborg;
+				PROVISIONING_PROFILE = "D9699CDB-A336-4C33-AB6D-D641035D9E1B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D9699CDB-A336-4C33-AB6D-D641035D9E1B";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OnlineAfspraken_Prefix.pch;
+				INFOPLIST_FILE = "OnlineAfspraken-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = BeautycentrumIngeborg;
+				PROVISIONING_PROFILE = "4306239F-1283-4C90-A249-9AC45C0998C3";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C1DAE10138171CE0018F370 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Onlineafspraken.nl BV";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "4306239F-1283-4C90-A249-9AC45C0998C3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4306239F-1283-4C90-A249-9AC45C0998C3";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		2C1DAE11138171CE0018F370 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OnlineAfspraken_Prefix.pch;
+				INFOPLIST_FILE = "OnlineAfspraken-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = BeautycentrumIngeborg;
+				PROVISIONING_PROFILE = "4306239F-1283-4C90-A249-9AC45C0998C3";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jorgen Kromhout (WZ42323S32)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jorgen Kromhout (WZ42323S32)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "78C74E90-977B-4701-A2E0-4C74D8520F69";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "78C74E90-977B-4701-A2E0-4C74D8520F69";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Onlineafspraken.nl BV";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "4306239F-1283-4C90-A249-9AC45C0998C3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4306239F-1283-4C90-A249-9AC45C0998C3";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MizarIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				2C1DAE11138171CE0018F370 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Distribution;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OnlineAfspraken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				2C1DAE10138171CE0018F370 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Distribution;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

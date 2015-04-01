@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* AppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 767}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1669}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* OnlineAfspraken */ = {
+		activeExec = 0;
+		executables = (
+			2CF7EC41135F0F300068D087 /* OnlineAfspraken */,
+		);
+	};
+	28D7ACF70DDB3853001CB0EB /* MainViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {915, 7969}}";
+			sepNavSelRange = "{13515, 0}";
+			sepNavVisRange = "{12668, 2020}";
+			sepNavWindowFrame = "{{50, 4}, {750, 774}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 2CF7EC41135F0F300068D087 /* OnlineAfspraken */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* OnlineAfspraken */;
+		codeSenseManager = 2CF7EC6D135F0F370068D087 /* Code sense */;
+		executables = (
+			2CF7EC41135F0F300068D087 /* OnlineAfspraken */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					704,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 326286545;
+			PBXWorkspaceStateSaveDate = 326286545;
+		};
+		perUserProjectItems = {
+			2C8E511C1372B6A700EE9E5F /* PBXTextBookmark */ = 2C8E511C1372B6A700EE9E5F /* PBXTextBookmark */;
+			2C8E511D1372B6A700EE9E5F /* PBXTextBookmark */ = 2C8E511D1372B6A700EE9E5F /* PBXTextBookmark */;
+			2C8E511E1372B6A700EE9E5F /* PBXTextBookmark */ = 2C8E511E1372B6A700EE9E5F /* PBXTextBookmark */;
+			2C8E51E91372BCF600EE9E5F /* PBXTextBookmark */ = 2C8E51E91372BCF600EE9E5F /* PBXTextBookmark */;
+			2C8E51EA1372BCF600EE9E5F /* PBXTextBookmark */ = 2C8E51EA1372BCF600EE9E5F /* PBXTextBookmark */;
+			2C8E51EB1372BCF600EE9E5F /* PBXTextBookmark */ = 2C8E51EB1372BCF600EE9E5F /* PBXTextBookmark */;
+			2CF7ECF0135F1BE20068D087 /* PBXTextBookmark */ = 2CF7ECF0135F1BE20068D087 /* PBXTextBookmark */;
+			2CF7ECF1135F1BE20068D087 /* PBXBookmark */ = 2CF7ECF1135F1BE20068D087 /* PBXBookmark */;
+		};
+		sourceControlManager = 2CF7EC6C135F0F370068D087 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	2C8E511C1372B6A700EE9E5F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */;
+		name = "MakeAppointmentViewController.m: 108";
+		rLen = 0;
+		rLoc = 3132;
+		rType = 0;
+		vrLen = 1545;
+		vrLoc = 2843;
+	};
+	2C8E511D1372B6A700EE9E5F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C0838A1312B5C400314717 /* MakeAppointmentViewController.h */;
+		name = "MakeAppointmentViewController.h: 12";
+		rLen = 0;
+		rLoc = 235;
+		rType = 0;
+		vrLen = 1518;
+		vrLoc = 0;
+	};
+	2C8E511E1372B6A700EE9E5F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */;
+		name = "MakeAppointmentViewController.m: 335";
+		rLen = 0;
+		rLoc = 12150;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 1664;
+	};
+	2C8E51E91372BCF600EE9E5F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */;
+		name = "MakeAppointmentViewController.m: 108";
+		rLen = 0;
+		rLoc = 3132;
+		rType = 0;
+		vrLen = 1510;
+		vrLoc = 2843;
+	};
+	2C8E51EA1372BCF600EE9E5F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C0838A1312B5C400314717 /* MakeAppointmentViewController.h */;
+		name = "MakeAppointmentViewController.h: 12";
+		rLen = 0;
+		rLoc = 235;
+		rType = 0;
+		vrLen = 1518;
+		vrLoc = 0;
+	};
+	2C8E51EB1372BCF600EE9E5F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */;
+		name = "MakeAppointmentViewController.m: 335";
+		rLen = 0;
+		rLoc = 12150;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 1664;
+	};
+	2CF7EC41135F0F300068D087 /* OnlineAfspraken */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = OnlineAfspraken;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	2CF7EC6C135F0F370068D087 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	2CF7EC6D135F0F370068D087 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	2CF7ECF0135F1BE20068D087 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C081781312860500314717 /* SelectAppointmentTimeViewController.m */;
+		name = "SelectAppointmentTimeViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 445;
+		vrLoc = 0;
+	};
+	2CF7ECF1135F1BE20068D087 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 63B45960130E8C52002D8761 /* tabbar.png */;
+	};
+	63A61CEE1313B4830027CD77 /* SelectBirthdayViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 1443}}";
+			sepNavSelRange = "{988, 0}";
+			sepNavVisRange = "{0, 1246}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	63AFF5E7130BFE8B008E8E1F /* Constants.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{163, 0}";
+			sepNavVisRange = "{0, 1083}";
+			sepNavWindowFrame = "{{276, 4}, {750, 774}}";
+		};
+	};
+	63B41C60130D64370005AF2C /* OARequest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {796, 9737}}";
+			sepNavSelRange = "{4715, 0}";
+			sepNavVisRange = "{4257, 1865}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	63B45BF5130EB08A002D8761 /* SplashViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 3315}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{6891, 1464}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	63C081771312860500314717 /* SelectAppointmentTimeViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 997}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	63C081781312860500314717 /* SelectAppointmentTimeViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {929, 4134}}";
+			sepNavSelRange = "{1169, 0}";
+			sepNavVisRange = "{607, 1762}";
+			sepNavWindowFrame = "{{115, 4}, {750, 774}}";
+		};
+	};
+	63C0838A1312B5C400314717 /* MakeAppointmentViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 1001}}";
+			sepNavSelRange = "{235, 0}";
+			sepNavVisRange = "{0, 1518}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	63C0838B1312B5C400314717 /* MakeAppointmentViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {915, 9958}}";
+			sepNavSelRange = "{12150, 0}";
+			sepNavVisRange = "{1664, 1659}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	63C33E0F131D487E00FA982C /* AppointmentsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 623}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1021}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	63C33E10131D487E00FA982C /* AppointmentsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {950, 3640}}";
+			sepNavSelRange = "{3416, 0}";
+			sepNavVisRange = "{0, 1054}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	8C927420133E1BB300C9377C /* FacebookModule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {747, 3120}}";
+			sepNavSelRange = "{867, 0}";
+			sepNavVisRange = "{0, 1355}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	8C927433133E1BB300C9377C /* FBDialog.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1202, 8190}}";
+			sepNavSelRange = "{19071, 0}";
+			sepNavVisRange = "{20277, 1464}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	8C927443133E1BB300C9377C /* MyFBLoginButton.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 608}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+	8C927444133E1BB300C9377C /* MyFBLoginButton.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 716}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
+}
