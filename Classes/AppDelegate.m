@@ -57,16 +57,20 @@
 #pragma mark -
 #pragma mark Application lifecycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
-                                                                                             |UIUserNotificationTypeSound
-                                                                                             |UIUserNotificationTypeAlert) categories:nil];
-        [application registerUserNotificationSettings:settings];
-    } else {
-        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
-        [application registerForRemoteNotificationTypes:myTypes];
+#ifdef __IPHONE_8_0
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
     }
+    else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+    }
+#else
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+#endif
     
     [self.window addSubview:splashViewController.view];
     [self.window makeKeyAndVisible];
@@ -74,9 +78,22 @@
     return YES;
 }
 
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+#ifdef __IPHONE_8_0
+- (void)application:(UIApplication *)application   didRegisterUserNotificationSettings:   (UIUserNotificationSettings *)notificationSettings
+{
+    //register to receive notifications
     [application registerForRemoteNotifications];
 }
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString   *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+{
+    //handle the actions
+    if ([identifier isEqualToString:@"declineAction"]){
+    }
+    else if ([identifier isEqualToString:@"answerAction"]){
+    }
+}
+#endif
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
@@ -93,9 +110,43 @@
     [defaults synchronize];
 }
 
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    //NSLog(@"Application received remote notification: %@", userInfo);
+    
+    NSDictionary *values = [userInfo objectForKey:@"aps"];
+    NSString *payload = [values objectForKey:@"payload"];
+    NSString *payload_params = [values objectForKey:@"payload_params"];
+    //NSLog(@"%@", payload);
+    //NSLog(@"%@", payload_params);
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:payload forKey:@"payload"];
+    [defaults setObject:payload_params forKey:@"payload_params"];
+    [defaults synchronize];
+    
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
     NSLog(@"Failed to get token, error: %@", error);
+}
+
+- (void)handleBackgroundNotification:(NSDictionary *)notification
+{
+    NSDictionary *aps = (NSDictionary *)[notification objectForKey:@"aps"];
+    NSMutableString *alert = [NSMutableString stringWithString:@""];
+    if ([aps objectForKey:@"alert"])
+    {
+        [alert appendString:(NSString *)[aps objectForKey:@"alert"]];
+    }
+    if ([notification objectForKey:@"payload"])
+    {
+        // do something with job id
+        NSString *payload = [[notification objectForKey:@"payload"] stringValue];
+        NSLog(@"Payload received: %@", payload);
+    }
 }
 
 // -------------------------------------------------------------------------------

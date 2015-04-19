@@ -51,8 +51,10 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
     
-    NSLog(@"My stored token is: %@", deviceToken);
-    urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
+    if (deviceToken != nil) {
+        NSLog(@"My stored token is: %@", deviceToken);
+        urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
+    }
     NSLog(@"Loading URL: %@", urlAddress);
     
     NSURL *url = [NSURL URLWithString:urlAddress];

@@ -51,10 +51,13 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
     
-    NSLog(@"My stored token is: %@", deviceToken);
-    urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
-    NSLog(@"Loading URL: %@", urlAddress);
-
+    if(deviceToken != nil) {
+        
+        NSLog(@"My stored token is: %@", deviceToken);
+        urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
+        NSLog(@"Loading URL: %@", urlAddress);
+    }
+    
 
     [webView setDelegate:self];
     
@@ -103,6 +106,7 @@
 
 
 
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -120,8 +124,30 @@
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    //NSString *js_result = [webView stringByEvaluatingJavaScriptFromString:@"alertName({name:'Ricardo'});"];
+    
+    // setup a timer to check for payload drops
+    float theInterval = 1.0;
+    theTimer = [NSTimer scheduledTimerWithTimeInterval:theInterval
+                                                target:self selector:@selector(checkPayload:)
+                                              userInfo:nil repeats:YES];
 }
+
+- (void) checkPayload:(NSTimer *) timer {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *payload_cache = [defaults stringForKey:@"payload"];
+    NSString *payload_params_cache = [defaults stringForKey:@"payload_params"];
+    if(![payload_cache isEqualToString:@""]) {
+        NSString *callback = [[[payload_cache stringByAppendingString:@"("] stringByAppendingString:payload_params_cache] stringByAppendingString:@");"];
+        NSLog(@"Payload with callback: %@", callback);
+        
+        NSString *js_result = [webView stringByEvaluatingJavaScriptFromString:callback];
+        
+        [defaults setObject:@"" forKey:@"payload"];
+        [defaults setObject:@"" forKey:@"payload_params"];
+        [defaults synchronize];
+    }
+}
+
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *requestString = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding];

@@ -14,6 +14,8 @@
 
 @interface WidgetViewController : DKViewController<UIWebViewDelegate> {
     id delegate;
+    
+    NSTimer     *theTimer;
 
     IBOutlet UIWebView *webView;
 }

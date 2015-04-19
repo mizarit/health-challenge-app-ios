@@ -429,8 +429,9 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = HealthChallenge;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "fd7c86ae-7d01-4fbb-9a66-1064f2f7dfd7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "fd7c86ae-7d01-4fbb-9a66-1064f2f7dfd7";
+				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -452,7 +453,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = HealthChallenge;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7ca02885-5a1b-4b7d-8c93-362d3f9f8acd";
+				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -491,7 +493,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = HealthChallenge;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7ca02885-5a1b-4b7d-8c93-362d3f9f8acd";
+				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
