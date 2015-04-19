@@ -38,6 +38,7 @@
 	widgetViewController.view.alpha = 0.0;
 	
 	navController.viewControllers = [NSArray arrayWithObject:widgetViewController];
+    [navController setNavigationBarHidden:YES animated:NO];
 	[window addSubview:navController.view];
 	
 	[splashViewController release];
@@ -55,16 +56,47 @@
 
 #pragma mark -
 #pragma mark Application lifecycle
-
-- (BOOL) application:(UIApplication *) application 
-	didFinishLaunchingWithOptions:(NSDictionary *) launchOptions {    
-	
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
+                                                                                             |UIUserNotificationTypeSound
+                                                                                             |UIUserNotificationTypeAlert) categories:nil];
+        [application registerUserNotificationSettings:settings];
+    } else {
+        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
+        [application registerForRemoteNotificationTypes:myTypes];
+    }
+    
     [self.window addSubview:splashViewController.view];
     [self.window makeKeyAndVisible];
-
+    
     return YES;
 }
 
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+    NSString *devToken = [[[[deviceToken description]
+                            stringByReplacingOccurrencesOfString:@"<"withString:@""]
+                           stringByReplacingOccurrencesOfString:@">" withString:@""]
+                          stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    //NSLog(@"My token is: %@", devToken);
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:devToken forKey:@"devicetoken"];
+    [defaults synchronize];
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+    NSLog(@"Failed to get token, error: %@", error);
+}
 
 // -------------------------------------------------------------------------------
 

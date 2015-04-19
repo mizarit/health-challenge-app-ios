@@ -21,19 +21,20 @@
     [super viewDidLoad];
 	
 	appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-	
+	/*
 	UILabel *label = [[UILabel alloc] 
 		initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
 
 	label.backgroundColor = [UIColor clearColor];
 	label.font            = [UIFont boldSystemFontOfSize:23.0];
 	//label.shadowColor     = [UIColor colorWithWhite:0.0 alpha:0.5];
-	label.textAlignment   = UITextAlignmentCenter;
+	//label.textAlignment   = UITextAlignmentCenter;
 	label.textColor       = [UIColor whiteColor];
 	label.text            = self.title;	
 	[label sizeToFit];
-	self.navigationItem.titleView = label;		
+	self.navigationItem.titleView = label;
 	[label release];
+     */
 }
 
 // -------------------------------------------------------------------------------

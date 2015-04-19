@@ -48,6 +48,13 @@
 
     NSString *urlAddress = kOAWidgetURL;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
+    
+    NSLog(@"My stored token is: %@", deviceToken);
+    urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
+    NSLog(@"Loading URL: %@", urlAddress);
+    
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];

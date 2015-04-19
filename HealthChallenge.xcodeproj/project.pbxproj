@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,7 +35,6 @@
 		63AFF67E130C1B0B008E8E1F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF67D130C1B0B008E8E1F /* CFNetwork.framework */; };
 		63AFF691130C1B20008E8E1F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF690130C1B20008E8E1F /* SystemConfiguration.framework */; };
 		63AFF697130C1B2E008E8E1F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF696130C1B2E008E8E1F /* MessageUI.framework */; };
-		63AFF6A1130C1B5F008E8E1F /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF6A0130C1B5F008E8E1F /* libz.1.2.3.dylib */; };
 		63AFF6AD130C1BC5008E8E1F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFF6AC130C1BC5008E8E1F /* MobileCoreServices.framework */; };
 		63B0041E130FBAFA00B55C40 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B0041D130FBAFA00B55C40 /* QuartzCore.framework */; };
 		63B41C64130D647A0005AF2C /* DKAsyncDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B41C63130D647A0005AF2C /* DKAsyncDataLoader.m */; };
@@ -48,6 +47,13 @@
 		63B45D91130ED369002D8761 /* DKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B45D90130ED369002D8761 /* DKCalendarView.m */; };
 		63C33CD6131D2A4D00FA982C /* DKPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C33CD4131D2A4D00FA982C /* DKPopUp.m */; };
 		63C33ED3131D5A8A00FA982C /* DDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C33ED2131D5A8A00FA982C /* DDPageControl.m */; };
+		8C8D16C21ADFE52000022D24 /* NSObject+SEWebviewJSListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D16C11ADFE52000022D24 /* NSObject+SEWebviewJSListener.m */; };
+		8C9196351ADFA23900F55DEC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9196341ADFA23900F55DEC /* AudioToolbox.framework */; };
+		8C9196371ADFA44A00F55DEC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9196361ADFA44A00F55DEC /* AVFoundation.framework */; };
+		8CBD10D81ADEA06B006354E2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CBD10D71ADEA06B006354E2 /* Default-568h@2x.png */; };
+		8CBD10DA1ADEA1DA006354E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBD10D91ADEA1DA006354E2 /* libz.dylib */; };
+		8CD20DE81ADFF0A800BF3CB0 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD20DE71ADFF0A800BF3CB0 /* UIView+Toast.m */; };
+		8CD20DEB1AE24DE200BF3CB0 /* icon_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD20DEA1AE24DE200BF3CB0 /* icon_120x120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +67,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* 2driverijopleidingen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2driverijopleidingen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* HealthChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,7 +77,7 @@
 		2C7C29B613A242340023AC5D /* WidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetViewController.h; sourceTree = "<group>"; };
 		2C7C29B713A242340023AC5D /* WidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetViewController.m; sourceTree = "<group>"; };
 		2C7C29B913A242420023AC5D /* WidgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WidgetViewController.xib; path = Classes/WidgetViewController.xib; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* OnlineAfspraken_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineAfspraken_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* HealthChallenge_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthChallenge_Prefix.pch; sourceTree = "<group>"; };
 		632DE811131692A6004FC55D /* DKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKProgressView.h; sourceTree = "<group>"; };
 		632DE812131692A6004FC55D /* DKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKProgressView.m; sourceTree = "<group>"; };
 		632DE83813169829004FC55D /* pb_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_bg.png; sourceTree = "<group>"; };
@@ -90,7 +96,6 @@
 		63AFF67D130C1B0B008E8E1F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63AFF690130C1B20008E8E1F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		63AFF696130C1B2E008E8E1F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		63AFF6A0130C1B5F008E8E1F /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		63AFF6AC130C1BC5008E8E1F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		63B0041D130FBAFA00B55C40 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		63B41C62130D647A0005AF2C /* DKAsyncDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAsyncDataLoader.h; sourceTree = "<group>"; };
@@ -109,7 +114,16 @@
 		63C33CD4131D2A4D00FA982C /* DKPopUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPopUp.m; sourceTree = "<group>"; };
 		63C33ED1131D5A8A00FA982C /* DDPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageControl.h; sourceTree = "<group>"; };
 		63C33ED2131D5A8A00FA982C /* DDPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageControl.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* OnlineAfspraken-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OnlineAfspraken-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8C8D16C11ADFE52000022D24 /* NSObject+SEWebviewJSListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SEWebviewJSListener.m"; sourceTree = "<group>"; };
+		8C8D16C31ADFE55500022D24 /* NSObject+SEWebviewJSListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SEWebviewJSListener.h"; sourceTree = "<group>"; };
+		8C9196341ADFA23900F55DEC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8C9196361ADFA44A00F55DEC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8CBD10D71ADEA06B006354E2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8CBD10D91ADEA1DA006354E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8CD20DE71ADFF0A800BF3CB0 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		8CD20DE91ADFF0BB00BF3CB0 /* UIView+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		8CD20DEA1AE24DE200BF3CB0 /* icon_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120x120.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* HealthChallenge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HealthChallenge-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,13 +131,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9196371ADFA44A00F55DEC /* AVFoundation.framework in Frameworks */,
+				8C9196351ADFA23900F55DEC /* AudioToolbox.framework in Frameworks */,
+				8CBD10DA1ADEA1DA006354E2 /* libz.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				63AFF67E130C1B0B008E8E1F /* CFNetwork.framework in Frameworks */,
 				63AFF691130C1B20008E8E1F /* SystemConfiguration.framework in Frameworks */,
 				63AFF697130C1B2E008E8E1F /* MessageUI.framework in Frameworks */,
-				63AFF6A1130C1B5F008E8E1F /* libz.1.2.3.dylib in Frameworks */,
 				63AFF6AD130C1BC5008E8E1F /* MobileCoreServices.framework in Frameworks */,
 				63B0041E130FBAFA00B55C40 /* QuartzCore.framework in Frameworks */,
 			);
@@ -160,7 +176,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* 2driverijopleidingen.app */,
+				1D6058910D05DD3D006BFB54 /* HealthChallenge.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +184,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				8CD20DEA1AE24DE200BF3CB0 /* icon_120x120.png */,
+				8CBD10D71ADEA06B006354E2 /* Default-568h@2x.png */,
 				04F30648138949C800C49162 /* icon_114x114.png */,
 				2C1DAE18138173DC0018F370 /* Default.png */,
 				2C1DAE16138173D40018F370 /* Default@2x.png */,
@@ -185,7 +203,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* OnlineAfspraken_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* HealthChallenge_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -198,7 +216,7 @@
 				04C4348913894D8100E99061 /* MainWindow.xib */,
 				2C7C29B913A242420023AC5D /* WidgetViewController.xib */,
 				63B45BF6130EB08A002D8761 /* SplashViewController.xib */,
-				8D1107310486CEB800E47090 /* OnlineAfspraken-Info.plist */,
+				8D1107310486CEB800E47090 /* HealthChallenge-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -206,13 +224,15 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C9196361ADFA44A00F55DEC /* AVFoundation.framework */,
+				8C9196341ADFA23900F55DEC /* AudioToolbox.framework */,
+				8CBD10D91ADEA1DA006354E2 /* libz.dylib */,
 				63AFF696130C1B2E008E8E1F /* MessageUI.framework */,
 				63AFF67D130C1B0B008E8E1F /* CFNetwork.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				63AFF690130C1B20008E8E1F /* SystemConfiguration.framework */,
-				63AFF6A0130C1B5F008E8E1F /* libz.1.2.3.dylib */,
 				63AFF6AC130C1BC5008E8E1F /* MobileCoreServices.framework */,
 				63B0041D130FBAFA00B55C40 /* QuartzCore.framework */,
 			);
@@ -253,6 +273,10 @@
 				632DE812131692A6004FC55D /* DKProgressView.m */,
 				63C33CD3131D2A4D00FA982C /* DKPopUp.h */,
 				63C33CD4131D2A4D00FA982C /* DKPopUp.m */,
+				8C8D16C11ADFE52000022D24 /* NSObject+SEWebviewJSListener.m */,
+				8C8D16C31ADFE55500022D24 /* NSObject+SEWebviewJSListener.h */,
+				8CD20DE71ADFF0A800BF3CB0 /* UIView+Toast.m */,
+				8CD20DE91ADFF0BB00BF3CB0 /* UIView+Toast.h */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -295,7 +319,7 @@
 			);
 			name = 2driverijopleidingen;
 			productName = 2driverijopleidingen;
-			productReference = 1D6058910D05DD3D006BFB54 /* 2driverijopleidingen.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* HealthChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -304,9 +328,15 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0620;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 4YTP2MU893;
+					};
+				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OnlineAfspraken" */;
-			compatibilityVersion = "Xcode 3.1";
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HealthChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -337,8 +367,10 @@
 				2C1DAE131381738F0018F370 /* icon_57x57.png in Resources */,
 				2C1DAE17138173D40018F370 /* Default@2x.png in Resources */,
 				2C1DAE19138173DC0018F370 /* Default.png in Resources */,
+				8CBD10D81ADEA06B006354E2 /* Default-568h@2x.png in Resources */,
 				04F3063C1389495F00C49162 /* customer_background_320x480.png in Resources */,
 				04F3063D1389495F00C49162 /* customer_background_640x960.png in Resources */,
+				8CD20DEB1AE24DE200BF3CB0 /* icon_120x120.png in Resources */,
 				04F3063E1389495F00C49162 /* customer_icon_114x114.png in Resources */,
 				04F3063F1389495F00C49162 /* customer_icon_512x512.png in Resources */,
 				04F306401389495F00C49162 /* customer_icon_57x57.png in Resources */,
@@ -355,11 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD20DE81ADFF0A800BF3CB0 /* UIView+Toast.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				63AFF5DC130BFE22008E8E1F /* DKActivityView.m in Sources */,
 				63AFF5DD130BFE22008E8E1F /* DKAlertView.m in Sources */,
 				63AFF5E0130BFE22008E8E1F /* DKSyncDataLoader.m in Sources */,
+				8C8D16C21ADFE52000022D24 /* NSObject+SEWebviewJSListener.m in Sources */,
 				63AFF5E1130BFE22008E8E1F /* DKViewController.m in Sources */,
 				63B41C64130D647A0005AF2C /* DKAsyncDataLoader.m in Sources */,
 				63B45BF7130EB08A002D8761 /* SplashViewController.m in Sources */,
@@ -381,19 +415,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jorgen Kromhout (WZ42323S32)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jorgen Kromhout (WZ42323S32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = OnlineAfspraken_Prefix.pch;
-				INFOPLIST_FILE = "OnlineAfspraken-Info.plist";
+				GCC_PREFIX_HEADER = HealthChallenge_Prefix.pch;
+				INFOPLIST_FILE = "HealthChallenge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = 2driverijopleidingen;
+				PRODUCT_NAME = HealthChallenge;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -405,16 +440,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = OnlineAfspraken_Prefix.pch;
-				INFOPLIST_FILE = "OnlineAfspraken-Info.plist";
+				GCC_PREFIX_HEADER = HealthChallenge_Prefix.pch;
+				INFOPLIST_FILE = "HealthChallenge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = 2driverijopleidingen;
+				PRODUCT_NAME = HealthChallenge;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -424,13 +461,12 @@
 		2C1DAE10138171CE0018F370 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Onlineafspraken.nl BV";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ricardo Matters (4YTP2MU893)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ricardo Matters (4YTP2MU893)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
@@ -443,16 +479,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = OnlineAfspraken_Prefix.pch;
-				INFOPLIST_FILE = "OnlineAfspraken-Info.plist";
+				GCC_PREFIX_HEADER = HealthChallenge_Prefix.pch;
+				INFOPLIST_FILE = "HealthChallenge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = 2driverijopleidingen;
+				PRODUCT_NAME = HealthChallenge;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -462,15 +500,15 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jorgen Kromhout (WZ42323S32)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jorgen Kromhout (WZ42323S32)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ricardo Matters (R794A42959)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ricardo Matters (R794A42959)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fd7c86ae-7d01-4fbb-9a66-1064f2f7dfd7";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
@@ -479,13 +517,12 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Onlineafspraken.nl BV";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Onlineafspraken.nl BV";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ricardo Matters (4YTP2MU893)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ricardo Matters (4YTP2MU893)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
@@ -507,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Distribution;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OnlineAfspraken" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HealthChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

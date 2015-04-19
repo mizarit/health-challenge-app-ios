@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:OnlineAfspraken.xcodeproj">
+      location = "self:HealthChallenge.xcodeproj">
    </FileRef>
 </Workspace>

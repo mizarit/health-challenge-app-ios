@@ -58,7 +58,7 @@
 		currentMonthLabel = [[UILabel alloc] initWithFrame:CGRectMake(38, 0, 99, 38)];
 		currentMonthLabel.font            = [UIFont boldSystemFontOfSize:15];
 		currentMonthLabel.backgroundColor = [UIColor clearColor];
-		currentMonthLabel.textAlignment   = UITextAlignmentCenter;
+		//currentMonthLabel.textAlignment   = UITextAlignmentCenter;
 		currentMonthLabel.textColor       = [UIColor whiteColor];
 		currentMonthLabel.text            = @"February 2011";
 		[self addSubview:currentMonthLabel];

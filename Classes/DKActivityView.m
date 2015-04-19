@@ -32,7 +32,7 @@
 	CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
 	
 	UIInterfaceOrientation currentOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-	BOOL portraitOrientation = currentOrientation == UIInterfaceOrientationPortrait || UIInterfaceOrientationPortraitUpsideDown;
+	BOOL portraitOrientation = currentOrientation == (UIInterfaceOrientationPortrait |UIInterfaceOrientationPortraitUpsideDown);
 	
 	if (portraitOrientation) {
 		[super initWithFrame:CGRectMake(0, 0, appFrame.size.width, appFrame.size.height + 20)];
@@ -56,7 +56,7 @@
 	titleLable.shadowColor     = [UIColor blackColor];
 	titleLable.shadowOffset    = CGSizeMake(-1, -1);
 	titleLable.font            = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
-	titleLable.textAlignment   = UITextAlignmentCenter;
+	//titleLable.textAlignment   = UITextAlignmentCenter;
 	titleLable.textColor       = [UIColor whiteColor];
 	titleLable.text            = theTitle;
 	[self addSubview:titleLable];
@@ -67,7 +67,7 @@
 	messageLable.backgroundColor = [UIColor clearColor];
 	messageLable.shadowColor     = [UIColor blackColor];
 	messageLable.shadowOffset    = CGSizeMake(-1, -1);
-	messageLable.textAlignment   = UITextAlignmentCenter;
+	//messageLable.textAlignment   = UITextAlignmentCenter;
 	messageLable.textColor       = [UIColor whiteColor];
 	messageLable.text            = theMessage;
 	[self addSubview:messageLable];

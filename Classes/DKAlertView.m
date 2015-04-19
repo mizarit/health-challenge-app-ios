@@ -32,7 +32,7 @@
 	CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
 	
 	UIInterfaceOrientation currentOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-	BOOL portraitOrientation = currentOrientation == UIInterfaceOrientationPortrait || UIInterfaceOrientationPortraitUpsideDown;
+	BOOL portraitOrientation = currentOrientation == (UIInterfaceOrientationPortrait |UIInterfaceOrientationPortraitUpsideDown);
 	
 	if (portraitOrientation) {
 		self = [super initWithFrame:CGRectMake(0, 0, appFrame.size.width, appFrame.size.height + 20)];

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "DKViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import "AudioToolbox/AudioServices.h"
 
 
-@interface WidgetViewController : DKViewController {
+@interface WidgetViewController : DKViewController<UIWebViewDelegate> {
     id delegate;
 
     IBOutlet UIWebView *webView;
