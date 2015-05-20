@@ -120,10 +120,92 @@
     //NSLog(@"%@", payload_params);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
     
-    [defaults setObject:payload forKey:@"payload"];
-    [defaults setObject:payload_params forKey:@"payload_params"];
-    [defaults synchronize];
+    if([payload isEqualToString:@"sync"]) {
+        NSLog(@"Received push to sync");
+        if([CMStepCounter isStepCountingAvailable]) {
+            CMStepCounter *_stepCounter;
+            NSOperationQueue *_stepQueue;
+            
+            NSDate *now = [NSDate date];
+            
+            NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+            NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:now];
+            NSDate *beginOfDay = [calendar dateFromComponents:components];
+             
+            [_stepCounter queryStepCountStartingFrom:beginOfDay to:now toQueue:_stepQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
+                 if (!error) {
+                     NSLog(@"Steps from CM7 sensor: %ld", (long)numberOfSteps);
+                     
+                     NSString *urlAddress = kOAWidgetURL;
+                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
+                     NSURLConnection *connection;
+                     NSMutableData *buffer;
+                     
+                     if (deviceToken != nil) {
+                         urlAddress = [urlAddress stringByAppendingString:[@"&device_id=" stringByAppendingString: deviceToken]];
+                     }
+                     
+                     NSNumber *timestamp;
+                     timestamp = [NSNumber numberWithDouble: floor([[NSDate date] timeIntervalSince1970])];
+                     
+                     urlAddress = [urlAddress stringByAppendingString:[@"&timestamp=" stringByAppendingString:[NSString stringWithFormat:@"%d", [timestamp integerValue] ]]];
+                     urlAddress = [urlAddress stringByAppendingString:[@"&steps=" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)numberOfSteps]]];
+                     NSLog(@"Syncing with URL: %@", urlAddress);
+                     
+                     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlAddress]];
+                     
+                     connection = [NSURLConnection connectionWithRequest:request delegate:self];
+                     
+                     if (connection) {
+                         buffer = [NSMutableData data];
+                         [connection start];
+                     }
+                 }
+            }];
+        }
+        else {
+            NSInteger numberOfSteps = 456;
+            NSLog(@"Dummy steps from CM7 sensor: %ld", (long)numberOfSteps);
+            
+            NSString *urlAddress = kOAWidgetURL;
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
+            NSURLConnection *connection;
+            NSMutableData *buffer;
+            
+            urlAddress = [urlAddress stringByAppendingString:@"/main/externalPush?device=ios"];
+            
+            if (deviceToken != nil) {
+                urlAddress = [urlAddress stringByAppendingString:[@"&device_id=" stringByAppendingString: deviceToken]];
+            }
+         
+            NSNumber *timestamp;
+            timestamp = [NSNumber numberWithDouble: floor([[NSDate date] timeIntervalSince1970])];
+            
+            urlAddress = [urlAddress stringByAppendingString:[@"&timestamp=" stringByAppendingString:[NSString stringWithFormat:@"%d", [timestamp integerValue] ]]];
+            urlAddress = [urlAddress stringByAppendingString:[@"&steps=" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)numberOfSteps]]];
+            NSLog(@"Syncing with URL: %@", urlAddress);
+            
+            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlAddress]];
+            
+            connection = [NSURLConnection connectionWithRequest:request delegate:self];
+            
+            if (connection) {
+                buffer = [NSMutableData data];
+                [connection start];
+            }
+
+        }
+    }
+    else {
+        
+        [defaults setObject:payload forKey:@"payload"];
+        [defaults setObject:payload_params forKey:@"payload_params"];
+        [defaults synchronize];
+    }
     
     completionHandler(UIBackgroundFetchResultNewData);
 }

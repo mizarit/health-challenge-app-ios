@@ -23,4 +23,6 @@
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, retain) UIWebView *webView;
 
+@property (assign) NSInteger stepsToday;
+
 @end

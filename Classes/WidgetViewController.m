@@ -10,6 +10,13 @@
 #import "UIView+Toast.h"
 
 @implementation WidgetViewController
+{
+    CMStepCounter *_stepCounter;
+    NSInteger _stepsToday;
+    NSInteger _stepsAtBeginOfLiveCounting;
+    BOOL _isLiveCounting;
+    NSOperationQueue *_stepQueue;
+}
 
 @synthesize delegate;
 @synthesize webView;
@@ -19,14 +26,30 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        //NSLog(@"Loading URL: %@", @" test" );
+        _stepCounter = [[CMStepCounter alloc] init];
+        self.stepsToday = -1;
         
+        NSNotificationCenter *noteCenter = [NSNotificationCenter defaultCenter];
         
+        [noteCenter addObserver:self selector:@selector(timeChangedSignificantly:) name:UIApplicationSignificantTimeChangeNotification object:nil];
+        [noteCenter addObserver:self selector:@selector(willEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+        [noteCenter addObserver:self selector:@selector(didEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        
+        _stepQueue = [[NSOperationQueue alloc] init];
+        _stepQueue.maxConcurrentOperationCount = 1;
+        
+        [self _updateStepsTodayFromHistoryLive:YES];
+        
+         
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     [super dealloc];
 }
 
@@ -38,8 +61,6 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -47,6 +68,7 @@
     //self.title = NSLocalizedString(kCompanyName, kCompanyName);
     
     NSString *urlAddress = kOAWidgetURL;
+    urlAddress = [urlAddress stringByAppendingString:@"?device=ios"];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
@@ -104,9 +126,6 @@
     [super viewDidLoad];
 }
 
-
-
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -119,8 +138,6 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -275,6 +292,81 @@
    }
 - (BOOL)shouldOpenLinksExternally {
     return YES;
+}
+
+-(void)_updateStepsTodayFromHistoryLive:(BOOL)startLiveCounting
+{
+    if(![CMStepCounter isStepCountingAvailable]) {
+        NSLog(@" Step counting is not available on this device");
+        self.stepsToday = -1;
+        return;
+    }
+    
+    NSLog(@" Step counting is available on this device");
+    
+    NSDate *now = [NSDate date];
+    
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:now];
+    NSDate *beginOfDay = [calendar dateFromComponents:components];
+    
+    [_stepCounter queryStepCountStartingFrom:beginOfDay to:now toQueue:_stepQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
+        if (error) {
+            NSLog(@"%@", [error localizedDescription]);
+            self.stepsToday = -1;
+        }
+        else {
+            self.stepsToday = numberOfSteps;
+            
+            if(startLiveCounting) {
+                [self _startLiveCounting];
+            }
+        }
+    }];
+}
+
+-(void)_startLiveCounting
+{
+    if(_isLiveCounting) {
+        return;
+    }
+    
+    _isLiveCounting = YES;
+    _stepsAtBeginOfLiveCounting = self.stepsToday;
+    [_stepCounter startStepCountingUpdatesToQueue:_stepQueue updateOn:1 withHandler:^(NSInteger numberOfSteps, NSDate *timestamp, NSError *error) {
+        self.stepsToday = _stepsAtBeginOfLiveCounting + numberOfSteps;
+        NSLog(@"%ld", (long)self.stepsToday);
+    }];
+    
+    NSLog(@"Started live counting");
+}
+
+-(void)_stopLiveCounting
+{
+    if(!_isLiveCounting)
+    {
+        return;
+    }
+    [_stepCounter stopStepCountingUpdates];
+    _isLiveCounting = NO;
+    
+    NSLog(@"Stopped live counting");
+}
+
+-(void)timeChangedSignificantly:(NSNotification *)notification
+{
+    [self _stopLiveCounting];
+    [self _updateStepsTodayFromHistoryLive:YES];
+}
+
+-(void)willEnterForeground:(NSNotification *)notification
+{
+    [self _updateStepsTodayFromHistoryLive:YES];
+}
+
+-(void)didEnterBackground:(NSNotification *)notification
+{
+    [self _stopLiveCounting];
 }
 
 @end

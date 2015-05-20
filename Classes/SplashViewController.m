@@ -47,6 +47,7 @@
     [super viewDidLoad];
 
     NSString *urlAddress = kOAWidgetURL;
+    urlAddress = [urlAddress stringByAppendingString:@"?device=ios"];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
