@@ -70,6 +70,10 @@
     NSString *urlAddress = kOAWidgetURL;
     urlAddress = [urlAddress stringByAppendingString:@"?device=ios"];
     
+    if([CMStepCounter isStepCountingAvailable]) {
+        urlAddress = [urlAddress stringByAppendingString:@"&sensor=1"];
+    }
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
     
@@ -310,6 +314,50 @@
     NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:now];
     NSDate *beginOfDay = [calendar dateFromComponents:components];
     
+    
+ 
+    
+    NSLog(@"%@", now);
+    NSString *json = @"{";
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:json forKey:@"steps"];
+    [defaults synchronize];
+    
+    // insert as empty setting
+    for (int i = 0; i < 96; i++) {
+        beginOfDay = [now dateByAddingTimeInterval:-900*i];
+        [_stepCounter stopStepCountingUpdates];
+        [_stepCounter queryStepCountStartingFrom:beginOfDay to:now toQueue:_stepQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
+            if (!error) {
+                NSLog(@"%i %@ had steps %ld", i, beginOfDay, (long)numberOfSteps);
+                NSString *dateString = [NSDateFormatter localizedStringFromDate:beginOfDay
+                                                                      dateStyle:NSDateFormatterShortStyle
+                                                                      timeStyle:NSDateFormatterShortStyle];
+              // NSString *json = @"{";
+               // should read and append from settings
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                NSString *json = [defaults stringForKey:@"steps"];
+                
+                json = [json stringByAppendingString:@"\""];
+                json = [[json stringByAppendingString:dateString] stringByAppendingString:@"\":"];
+                json = [json stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)numberOfSteps]];
+                json = [json stringByAppendingString:@","];
+                
+                // should push json to setings
+                [defaults setObject:json forKey:@"steps"];
+                [defaults synchronize];
+
+                //NSLog(@"%@", json);
+                        
+            }
+        }];
+        
+        
+    }
+    
+    beginOfDay = [calendar dateFromComponents:components];
+    /*
     [_stepCounter queryStepCountStartingFrom:beginOfDay to:now toQueue:_stepQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
         if (error) {
             NSLog(@"%@", [error localizedDescription]);
@@ -323,6 +371,7 @@
             }
         }
     }];
+     */
 }
 
 -(void)_startLiveCounting
@@ -336,6 +385,12 @@
     [_stepCounter startStepCountingUpdatesToQueue:_stepQueue updateOn:1 withHandler:^(NSInteger numberOfSteps, NSDate *timestamp, NSError *error) {
         self.stepsToday = _stepsAtBeginOfLiveCounting + numberOfSteps;
         NSLog(@"%ld", (long)self.stepsToday);
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *steps = [NSString stringWithFormat: @"%ld", (long)self.stepsToday];
+        [defaults setObject:steps forKey:@"steps"];
+        [defaults synchronize];
+        
     }];
     
     NSLog(@"Started live counting");

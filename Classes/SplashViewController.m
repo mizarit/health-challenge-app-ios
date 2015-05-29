@@ -56,6 +56,11 @@
         NSLog(@"My stored token is: %@", deviceToken);
         urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
     }
+    
+    if([CMStepCounter isStepCountingAvailable]) {
+        urlAddress = [urlAddress stringByAppendingString:@"&sensor=1"];
+    }
+    
     NSLog(@"Loading URL: %@", urlAddress);
     
     NSURL *url = [NSURL URLWithString:urlAddress];

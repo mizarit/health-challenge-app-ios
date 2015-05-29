@@ -52,6 +52,14 @@
 	[UIView commitAnimations];
 }
 
+- (NSString *)URLEncodeStringFromString:(NSString *)string
+{
+    static CFStringRef charset = CFSTR("!@#$%&*()+'\";:=,/?[] ");
+    CFStringRef str = (__bridge CFStringRef)string;
+    CFStringEncoding encoding = kCFStringEncodingUTF8;
+    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, str, NULL, charset, encoding));
+}
+
 // -------------------------------------------------------------------------------
 
 #pragma mark -
@@ -71,6 +79,9 @@
 #else
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
 #endif
+    
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    //[[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:120];
     
     [self.window addSubview:splashViewController.view];
     [self.window makeKeyAndVisible];
@@ -95,6 +106,26 @@
 }
 #endif
 
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSString *urlAddress = kOAWidgetURL;
+    urlAddress = [urlAddress stringByAppendingString:@"/main/fetchTest"];
+
+    NSLog(@"Fetching with URL: %@", urlAddress);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlAddress]];
+    NSURLConnection *connection;
+    NSMutableData *buffer;
+
+    connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    if (connection) {
+        buffer = [NSMutableData data];
+        [connection start];
+    }
+    
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
     NSString *devToken = [[[[deviceToken description]
@@ -110,6 +141,7 @@
     [defaults synchronize];
 }
 
+
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     //NSLog(@"Application received remote notification: %@", userInfo);
     
@@ -120,58 +152,80 @@
     //NSLog(@"%@", payload_params);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
     
+    // debug
+    /*
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:now];
+    NSDate *beginOfDay = [calendar dateFromComponents:components];
+    NSInteger numberOfSteps = 1234;
+
+    NSLog(@"%@", now);
+    NSString *json = @"{";
+    
+    [defaults setObject:json forKey:@"steps"];
+    [defaults synchronize];
+    
+    // insert as empty setting
+    for (int i = 0; i < 96; i++) {
+        beginOfDay = [now dateByAddingTimeInterval:-900*i];
+     
+                //NSLog(@"%i %@ had steps %ld", i, beginOfDay, (long)numberOfSteps);
+                NSString *dateString = [NSDateFormatter localizedStringFromDate:beginOfDay
+                                                                      dateStyle:NSDateFormatterShortStyle
+                                                                      timeStyle:NSDateFormatterShortStyle];
+                // NSString *json = @"{";
+                // should read and append from settings
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                NSString *json = [defaults stringForKey:@"steps"];
+                
+                json = [json stringByAppendingString:@"\""];
+                json = [[json stringByAppendingString:dateString] stringByAppendingString:@"\":"];
+                json = [json stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)numberOfSteps]];
+                json = [json stringByAppendingString:@","];
+                
+                // should push json to setings
+                [defaults setObject:json forKey:@"steps"];
+                [defaults synchronize];
+                
+        
+                
+            }
+    
+    json = [defaults stringForKey:@"steps"];
+      NSLog(@"%@", json);
+    
+    */
+    // end debug
+
     if([payload isEqualToString:@"sync"]) {
         NSLog(@"Received push to sync");
+   
+        NSString *stepsVal = @"";
+        NSString *stepsVals = @"";
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
         if([CMStepCounter isStepCountingAvailable]) {
-            CMStepCounter *_stepCounter;
-            NSOperationQueue *_stepQueue;
             
-            NSDate *now = [NSDate date];
-            
-            NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-            NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:now];
-            NSDate *beginOfDay = [calendar dateFromComponents:components];
-             
-            [_stepCounter queryStepCountStartingFrom:beginOfDay to:now toQueue:_stepQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
-                 if (!error) {
-                     NSLog(@"Steps from CM7 sensor: %ld", (long)numberOfSteps);
-                     
-                     NSString *urlAddress = kOAWidgetURL;
-                     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
-                     NSURLConnection *connection;
-                     NSMutableData *buffer;
-                     
-                     if (deviceToken != nil) {
-                         urlAddress = [urlAddress stringByAppendingString:[@"&device_id=" stringByAppendingString: deviceToken]];
-                     }
-                     
-                     NSNumber *timestamp;
-                     timestamp = [NSNumber numberWithDouble: floor([[NSDate date] timeIntervalSince1970])];
-                     
-                     urlAddress = [urlAddress stringByAppendingString:[@"&timestamp=" stringByAppendingString:[NSString stringWithFormat:@"%d", [timestamp integerValue] ]]];
-                     urlAddress = [urlAddress stringByAppendingString:[@"&steps=" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)numberOfSteps]]];
-                     NSLog(@"Syncing with URL: %@", urlAddress);
-                     
-                     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlAddress]];
-                     
-                     connection = [NSURLConnection connectionWithRequest:request delegate:self];
-                     
-                     if (connection) {
-                         buffer = [NSMutableData data];
-                         [connection start];
-                     }
-                 }
-            }];
+            stepsVals = [defaults stringForKey:@"steps"];
+            stepsVal = [stepsVals substringToIndex:[stepsVals length]-1];
+            stepsVal = [stepsVal stringByAppendingString:@"}"];
+
         }
         else {
-            NSInteger numberOfSteps = 456;
-            NSLog(@"Dummy steps from CM7 sensor: %ld", (long)numberOfSteps);
-            
+            // debug
+            //stepsVals = [defaults stringForKey:@"steps"];
+            //stepsVal = [stepsVals substringToIndex:[stepsVals length]-1];
+            //stepsVal = [stepsVal stringByAppendingString:@"}"];
+            stepsVal = @"{}";
+            // end debug
+        }
+        
+        stepsVal = [self URLEncodeStringFromString:stepsVal];
+        
             NSString *urlAddress = kOAWidgetURL;
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
             NSURLConnection *connection;
             NSMutableData *buffer;
@@ -186,7 +240,8 @@
             timestamp = [NSNumber numberWithDouble: floor([[NSDate date] timeIntervalSince1970])];
             
             urlAddress = [urlAddress stringByAppendingString:[@"&timestamp=" stringByAppendingString:[NSString stringWithFormat:@"%d", [timestamp integerValue] ]]];
-            urlAddress = [urlAddress stringByAppendingString:[@"&steps=" stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)numberOfSteps]]];
+        
+            urlAddress = [urlAddress stringByAppendingString:[@"&steps=" stringByAppendingString:stepsVal]];
             NSLog(@"Syncing with URL: %@", urlAddress);
             
             NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlAddress]];
@@ -197,8 +252,11 @@
                 buffer = [NSMutableData data];
                 [connection start];
             }
+            else {
+                NSLog(@"Could not open connection");
+            }
 
-        }
+        
     }
     else {
         
@@ -255,6 +313,16 @@
     /*
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
+    
+    
+    // set a payload to reload the dataset
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"loadDataset" forKey:@"payload"];
+    [defaults setObject:@"" forKey:@"payload_params"];
+    [defaults synchronize];
+    NSLog(@"Returning from background");
+
+    
 }
 
 // -------------------------------------------------------------------------------
