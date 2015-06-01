@@ -8,6 +8,10 @@
 
 #import "WidgetViewController.h"
 #import "UIView+Toast.h"
+#import "UIImage+Resize.h"
+
+@interface WidgetViewController () <FDTakeDelegate>
+@end
 
 @implementation WidgetViewController
 {
@@ -65,25 +69,28 @@
 
 - (void)viewDidLoad
 {
-    //self.title = NSLocalizedString(kCompanyName, kCompanyName);
-    
-    NSString *urlAddress = kOAWidgetURL;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *urlAddress = [defaults stringForKey:@"baseurl"];
+    if(!urlAddress) {
+        urlAddress = kOAWidgetURL;
+    }
     urlAddress = [urlAddress stringByAppendingString:@"?device=ios"];
     
     if([CMStepCounter isStepCountingAvailable]) {
         urlAddress = [urlAddress stringByAppendingString:@"&sensor=1"];
     }
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
     
     if(deviceToken != nil) {
-        
-        NSLog(@"My stored token is: %@", deviceToken);
+        //NSLog(@"My stored token is: %@", deviceToken);
         urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
         NSLog(@"Loading URL: %@", urlAddress);
     }
     
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        NSLog(@"Device has no camera");
+    }
 
     [webView setDelegate:self];
     
@@ -93,41 +100,10 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
     
-    // VIBRATE
-    //AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    
-    // SOUND AND VIBRATE
-    //AudioServicesPlaySystemSound(1007);
-    
-    // JUST SOUND
-    /*
-     AVAudioSession* session = [AVAudioSession sharedInstance];
-    BOOL success;
-    NSError* error;
-    success = [session setCategory:AVAudioSessionCategoryPlayAndRecord
-                             error:&error];
-    if (!success)  {
-        NSLog(@"AVAudioSession error setting category:%@",error);
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    }
-    else {
-        SystemSoundID myAlertSound;
-        NSURL *url = [NSURL URLWithString:@"/System/Library/Audio/UISounds/sms-received1.caf"];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)(url), &myAlertSound);
-        AudioServicesPlaySystemSound(myAlertSound);
-    }
-    */
-
-    /*
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *setting = [defaults stringForKey:@"allowVibrate"];
-    NSLog(@"setting:%@", setting);
-    [defaults setObject:@"YES" forKey:@"allowVibrate"];
-    [defaults synchronize];
-    setting = [defaults stringForKey:@"allowVibrate"];
-    NSLog(@"setting:%@", setting);
-    */
     [super viewDidLoad];
+    
+    self.takeController = [[FDTakeController alloc] init];
+    self.takeController.delegate = self;
 }
 
 - (void)viewDidUnload
@@ -151,6 +127,7 @@
     theTimer = [NSTimer scheduledTimerWithTimeInterval:theInterval
                                                 target:self selector:@selector(checkPayload:)
                                               userInfo:nil repeats:YES];
+    
 }
 
 - (void) checkPayload:(NSTimer *) timer {
@@ -206,6 +183,19 @@
             AudioServicesCreateSystemSoundID((__bridge CFURLRef)(url), &myAlertSound);
             AudioServicesPlaySystemSound(myAlertSound);
         }
+    }
+    else if([key isEqualToString:@"attachfileinput"]) {
+        /*UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        //picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+        */
+       
+        [self.takeController setCurrentViewController:self];
+        [self.takeController takePhotoOrChooseFromLibrary];
     }
     else if([key isEqualToString:@"vibrate"]) {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
@@ -294,6 +284,8 @@
         }
     }
    }
+
+
 - (BOOL)shouldOpenLinksExternally {
     return YES;
 }
@@ -313,9 +305,6 @@
     NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
     NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:now];
     NSDate *beginOfDay = [calendar dateFromComponents:components];
-    
-    
- 
     
     NSLog(@"%@", now);
     NSString *json = @"{";
@@ -357,21 +346,6 @@
     }
     
     beginOfDay = [calendar dateFromComponents:components];
-    /*
-    [_stepCounter queryStepCountStartingFrom:beginOfDay to:now toQueue:_stepQueue withHandler:^(NSInteger numberOfSteps, NSError *error) {
-        if (error) {
-            NSLog(@"%@", [error localizedDescription]);
-            self.stepsToday = -1;
-        }
-        else {
-            self.stepsToday = numberOfSteps;
-            
-            if(startLiveCounting) {
-                [self _startLiveCounting];
-            }
-        }
-    }];
-     */
 }
 
 -(void)_startLiveCounting
@@ -422,6 +396,50 @@
 -(void)didEnterBackground:(NSNotification *)notification
 {
     [self _stopLiveCounting];
+}
+
+/*
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    UIImage *scaledImg = [UIImage imageWithImage:chosenImage scaledToSize:CGSizeMake(200.0, 200.0)];
+    
+    NSString *encodedString = [UIImageJPEGRepresentation(scaledImg, 1.0) base64EncodedStringWithOptions:0];
+    NSString *callback = [[@"imageSelected('" stringByAppendingString:encodedString] stringByAppendingString:@"');"];
+    
+    [webView stringByEvaluatingJavaScriptFromString:callback];
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+*/
+
+#pragma mark - FDTakeDelegate
+
+- (void)takeController:(FDTakeController *)controller didCancelAfterAttempting:(BOOL)madeAttempt
+{
+    UIAlertView *alertView2;
+    if (madeAttempt)
+        alertView2 = [[UIAlertView alloc] initWithTitle:@"Example app" message:@"The take was cancelled after selecting media" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    else
+        alertView2 = [[UIAlertView alloc] initWithTitle:@"Example app" message:@"The take was cancelled without selecting media" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView2 show];
+}
+
+- (void)takeController:(FDTakeController *)controller gotPhoto:(UIImage *)photo withInfo:(NSDictionary *)info
+{
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    UIImage *scaledImg = [UIImage imageWithImage:chosenImage scaledToSize:CGSizeMake(200.0, 200.0)];
+    
+    NSString *encodedString = [UIImageJPEGRepresentation(scaledImg, 1.0) base64EncodedStringWithOptions:0];
+    NSString *callback = [[@"imageSelected('" stringByAppendingString:encodedString] stringByAppendingString:@"');"];
+    
+    [webView stringByEvaluatingJavaScriptFromString:callback];
+
+    //[self.imageView setImage:photo];
 }
 
 @end

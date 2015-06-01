@@ -48,6 +48,8 @@
 		63C33CD6131D2A4D00FA982C /* DKPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C33CD4131D2A4D00FA982C /* DKPopUp.m */; };
 		63C33ED3131D5A8A00FA982C /* DDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C33ED2131D5A8A00FA982C /* DDPageControl.m */; };
 		8C2DAF5C1B00AED800D2BAF1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2DAF5B1B00AED800D2BAF1 /* CoreMotion.framework */; };
+		8C731EE71B1CC3DB006CF7DB /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C731EE61B1CC3DB006CF7DB /* UIImage+Resize.m */; };
+		8C86D9011B1CEB500046ABF8 /* FDTakeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C86D9001B1CEB500046ABF8 /* FDTakeController.m */; };
 		8C8D16C21ADFE52000022D24 /* NSObject+SEWebviewJSListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D16C11ADFE52000022D24 /* NSObject+SEWebviewJSListener.m */; };
 		8C9196351ADFA23900F55DEC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9196341ADFA23900F55DEC /* AudioToolbox.framework */; };
 		8C9196371ADFA44A00F55DEC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9196361ADFA44A00F55DEC /* AVFoundation.framework */; };
@@ -116,6 +118,10 @@
 		63C33ED1131D5A8A00FA982C /* DDPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageControl.h; sourceTree = "<group>"; };
 		63C33ED2131D5A8A00FA982C /* DDPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageControl.m; sourceTree = "<group>"; };
 		8C2DAF5B1B00AED800D2BAF1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8C731EE51B1CC3B0006CF7DB /* UIImage+Resize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		8C731EE61B1CC3DB006CF7DB /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		8C86D9001B1CEB500046ABF8 /* FDTakeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTakeController.m; sourceTree = "<group>"; };
+		8C86D9021B1CEB710046ABF8 /* FDTakeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDTakeController.h; sourceTree = "<group>"; };
 		8C8D16C11ADFE52000022D24 /* NSObject+SEWebviewJSListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SEWebviewJSListener.m"; sourceTree = "<group>"; };
 		8C8D16C31ADFE55500022D24 /* NSObject+SEWebviewJSListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SEWebviewJSListener.h"; sourceTree = "<group>"; };
 		8C9196341ADFA23900F55DEC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -250,6 +256,8 @@
 				2C7C29B713A242340023AC5D /* WidgetViewController.m */,
 				63B45BF4130EB08A002D8761 /* SplashViewController.h */,
 				63B45BF5130EB08A002D8761 /* SplashViewController.m */,
+				8C86D9001B1CEB500046ABF8 /* FDTakeController.m */,
+				8C86D9021B1CEB710046ABF8 /* FDTakeController.h */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -281,6 +289,8 @@
 				8C8D16C31ADFE55500022D24 /* NSObject+SEWebviewJSListener.h */,
 				8CD20DE71ADFF0A800BF3CB0 /* UIView+Toast.m */,
 				8CD20DE91ADFF0BB00BF3CB0 /* UIView+Toast.h */,
+				8C731EE51B1CC3B0006CF7DB /* UIImage+Resize.h */,
+				8C731EE61B1CC3DB006CF7DB /* UIImage+Resize.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -396,6 +406,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				63AFF5DC130BFE22008E8E1F /* DKActivityView.m in Sources */,
 				63AFF5DD130BFE22008E8E1F /* DKAlertView.m in Sources */,
+				8C731EE71B1CC3DB006CF7DB /* UIImage+Resize.m in Sources */,
 				63AFF5E0130BFE22008E8E1F /* DKSyncDataLoader.m in Sources */,
 				8C8D16C21ADFE52000022D24 /* NSObject+SEWebviewJSListener.m in Sources */,
 				63AFF5E1130BFE22008E8E1F /* DKViewController.m in Sources */,
@@ -406,6 +417,7 @@
 				63B45D91130ED369002D8761 /* DKCalendarView.m in Sources */,
 				63A61E2D1313F21C0027CD77 /* DKTextField.m in Sources */,
 				632DE813131692A6004FC55D /* DKProgressView.m in Sources */,
+				8C86D9011B1CEB500046ABF8 /* FDTakeController.m in Sources */,
 				63C33CD6131D2A4D00FA982C /* DKPopUp.m in Sources */,
 				63C33ED3131D5A8A00FA982C /* DDPageControl.m in Sources */,
 				2C7C29B813A242340023AC5D /* WidgetViewController.m in Sources */,

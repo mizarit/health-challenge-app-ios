@@ -46,14 +46,17 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
 
-    NSString *urlAddress = kOAWidgetURL;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *urlAddress = [defaults stringForKey:@"baseurl"];
+    if(!urlAddress) {
+        urlAddress = kOAWidgetURL;
+    }
     urlAddress = [urlAddress stringByAppendingString:@"?device=ios"];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *deviceToken = [defaults stringForKey:@"devicetoken"];
     
     if (deviceToken != nil) {
-        NSLog(@"My stored token is: %@", deviceToken);
+        //NSLog(@"My stored token is: %@", deviceToken);
         urlAddress = [urlAddress stringByAppendingString:[@"&ios_id=" stringByAppendingString: deviceToken]];
     }
     
@@ -61,7 +64,7 @@
         urlAddress = [urlAddress stringByAppendingString:@"&sensor=1"];
     }
     
-    NSLog(@"Loading URL: %@", urlAddress);
+    //NSLog(@"Loading URL: %@", urlAddress);
     
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];

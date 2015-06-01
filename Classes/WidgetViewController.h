@@ -10,9 +10,10 @@
 #import "DKViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "AudioToolbox/AudioServices.h"
+#import "FDTakeController.h"
 
 
-@interface WidgetViewController : DKViewController<UIWebViewDelegate> {
+@interface WidgetViewController : DKViewController<UIWebViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     id delegate;
     
     NSTimer     *theTimer;
@@ -24,5 +25,7 @@
 @property (nonatomic, retain) UIWebView *webView;
 
 @property (assign) NSInteger stepsToday;
+
+@property FDTakeController *takeController;
 
 @end

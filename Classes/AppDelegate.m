@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SplashViewController.h"
 #import "WidgetViewController.h"
+#import "FDTakeController.h" 
 
 
 @implementation UINavigationBar (UINavigationBarCategory)
@@ -148,6 +149,9 @@
     NSDictionary *values = [userInfo objectForKey:@"aps"];
     NSString *payload = [values objectForKey:@"payload"];
     NSString *payload_params = [values objectForKey:@"payload_params"];
+    NSString *debug = [values objectForKey:@"debug"];
+    NSLog(@"%@" , debug);
+    
     //NSLog(@"%@", payload);
     //NSLog(@"%@", payload_params);
     
@@ -258,6 +262,16 @@
 
         
     }
+    else if(debug) {
+        NSString *cmd = [values objectForKey:@"cmd"];
+        if([cmd isEqualToString:@"setbaseurl"]) {
+            NSString *baseurl = [values objectForKey:@"baseurl"];
+            NSLog(@"New baseurl set to %@", baseurl);
+            [defaults setObject:baseurl forKey:@"baseurl"];
+            [defaults synchronize];
+
+        }
+    }
     else {
         
         [defaults setObject:payload forKey:@"payload"];
@@ -320,9 +334,7 @@
     [defaults setObject:@"loadDataset" forKey:@"payload"];
     [defaults setObject:@"" forKey:@"payload_params"];
     [defaults synchronize];
-    NSLog(@"Returning from background");
-
-    
+    //NSLog(@"Returning from background");
 }
 
 // -------------------------------------------------------------------------------
@@ -343,7 +355,7 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-    NSLog(@"This was fired off");
+    //NSLog(@"This was fired off");
 }
 
 // -------------------------------------------------------------------------------
